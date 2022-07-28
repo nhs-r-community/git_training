@@ -125,9 +125,10 @@ ii. Create a folder in your local directory, this is where the GitHub (remote) r
 ### 2. Git clone (copy a GitHub repository)
 
 > If you're using GitLab instead of GitHub, these [steps](https://github.com/NHSDigital/rap-community-of-practice/blob/main/development-approach/01_intro-to-git.md#2-git-clone-copydownload-a-gitlab-repository) will help you set up.
+
 i. The repository's clone URL will be on the GitHub repository's main page (see image below).
 
-![](../images/git_clone.PNG)
+![](../images/git_clone.png)
 
 ii. Type ```git clone <repository's clone url>``` the git-demo repository using your local terminal. Enter your credentials when prompted (GitHub username and access token for the password.)
 ```
@@ -147,11 +148,11 @@ Notice how in the image above, the first line says "On branch main". In Git, **"
 
 i. To create a **new branch**, head over to GitHub, on the repository's main page, same webpage we used to find the Git clone repository's URL. To create a new branch on GitHub simply click on the "main" button underneath your repository's title.
 
-![](../images/create_branch.PNG)
+![](../images/create_branch.png)
 
 ii. Once in the dropdown menu, type in the branch's new name and hit Enter. You should now have a new branch, copy of the main branch.
 
-![](../images/create_branch_github.PNG)
+![](../images/create_branch_github.png)
 
 iii. In the above image notice how it points the original branch we are copying from, in grey letters: from "main". If you wish to create a new branch, which will be a copy from a different branch to "main", then set the repository to the branch you wish to copy from and then repeat steps i. and ii.
 
@@ -161,7 +162,7 @@ v. To start working on your branch and select, type in the terminal `git checkou
 
 vi. Type ```git status``` and this way you can confirm that you are in a new branch. Git will display a message showing the current branch name and the current branch's information.
 
-![](../images/image564.JPG)
+![](../images/image564.jpg)
 
 _**Reminder:** any changes you make while in the main branch won't be uploaded to GitHub, as the main branch is protected and locked, so make sure you are in your own working branch! You can confirm this with step vi. above._
 
@@ -192,15 +193,15 @@ For this exercise, create a file while in RStudio, with simply right-clicking on
     1. Open RStudio
     2. On the top toolbar go File -> New Project, this will open a Create New Project dialogue.
 
-    ![](../images/new_project.PNG)
+    ![](../images/new_project.png)
 
     3. In the Create New Project dialogue, select existing directory (since we have already cloned the GitHub repository to your local machine and have a folder) and in Location select the Open Folder icon to select the existing folder repository and click Create Project.
 
-    ![](../images/create_new_project.PNG)
+    ![](../images/create_new_project.png)
 
     4. You should be able to see the project structure on the lower right hand side windown as it is displayed on GitHub.
     
-    ![](../images/project_structure.PNG)
+    ![](../images/project_structure.png)
 
     5. On the top toolbar select File -> New File -> Rscript and save the file somewhere in your repository (don't forget to name your Rscipt!).
     6. Add something into that file, a simple print statement or a comment.
@@ -232,17 +233,17 @@ To use GitHub with RStudio Cloud and not RStudio desktop, first create an accoun
 
 * To create a project from GitHub, select the "Your Workspace" option on the left hand side once in RStudio Cloud and select New Project on the far right of the top toolbar, in the Your Projects space.
 
-![](../images/new_project_git.PNG)
+![](../images/new_project_git.png)
 
 * This will open a new dialogue that will ask for the Git Repository URL, this is the URL you copy, as described in [Step 2](01_intro_to_git.md#2-git-clone-copy-a-github-repository) of this guide. 
 * You will be prompted to enter your username (GitHub username) and your password, which is the access token created from the [Create Access token step](01_intro_to_git.md#creating-your-access-token-on-github).
 * Once the Git repository is deployed, you will notice the repository file structure on the right hand side panel.
 
-![](../images/project_structure.PNG)
+![](../images/project_structure.png)
 
 * Steps [3](01_intro_to_git.md#3-create-and-switch-to-a-new-branch), [4](01_intro_to_git.md#4-add-a-new-file) and [5](01_intro_to_git.md#5-commit-your-changes-follow-basic-git-command-workflow) will be the same, the only change being that instead of using your local terminal to input Git commands, you will be using the RStudio Cloud built-in terminal.
 
-![](../images/terminal.PNG)
+![](../images/terminal.png)
 
 # General: How to submit a pull request
 
@@ -266,7 +267,7 @@ To submit a pull request:
 
 Once you are assigned the pull request's reviewer, you should receive an email notification from GitHub with a link to the pull request's webpage. You can also view any active pull requests by clicking on Pull Requests on the top bar menu.
 
-![](../images/pull_requests.PNG)
+![](../images/pull_requests.png)
 
 On the Pull request page, there are four tabs: Conversation, Commits, Checks and Files changed:
 
@@ -313,17 +314,3 @@ GitHub has a .gitignore [template](https://github.com/github/gitignore/blob/main
 
 # External links
 * [GitHub Docs - Pull requests](https://docs.github.com/en/pull-requests)
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
