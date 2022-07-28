@@ -1,0 +1,1 @@
+Feel free to practice with adding, deleting or editing the above files, then following the [standard git command workflow](https://github.com/nhs-r-community/git_training/blob/hr_update/guides/intro_to_git.md#5-commit-your-changes-follow-standard-git-command-workflow) to push these changes to your branch.
