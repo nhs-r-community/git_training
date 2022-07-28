@@ -162,7 +162,7 @@ v. To start working on your branch and select, type in the terminal `git checkou
 
 vi. Type ```git status``` and this way you can confirm that you are in a new branch. Git will display a message showing the current branch name and the current branch's information.
 
-![](../images/image564.jpg)
+![](../images/image564.PNG)
 
 _**Reminder:** any changes you make while in the main branch won't be uploaded to GitHub, as the main branch is protected and locked, so make sure you are in your own working branch! You can confirm this with step vi. above._
 
