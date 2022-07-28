@@ -6,7 +6,7 @@ library(tidyverse)
 library(NHSRdatasets)
 
 # assing a string to a variable
-myString <- "Hello, World!"
+myString <- "Hi, I'm using version control!"
 
 # print the variable
 print(myString)
