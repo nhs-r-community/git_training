@@ -2,4 +2,4 @@
 
 Feel free to practice with adding, deleting or editing the above files, then following the [standard git command workflow](https://github.com/nhs-r-community/git_training/blob/hr_update/guides/intro_to_git.md#5-commit-your-changes-follow-standard-git-command-workflow) to push these changes to your branch.
 
-You can also either run an R script and/or a Python script should you wish to practice developing code using version control.
+You can also either run an [R script](./example_r_script.r) and/or a [Python script](./example_python_convert_fahrenheit.py) should you wish to practice developing code using version control.
