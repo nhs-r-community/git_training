@@ -1,14 +1,11 @@
 # git_training
-Git training from the NHS-R community
+Git training from the NHS-R community training steps:
 
-## Training guides
+1. Download [R](https://cran.r-project.org/bin/windows/base/) and [RStudio desktop](https://www.rstudio.com/products/rstudio/download/) or create an account on [RStudio cloud](https://login.rstudio.cloud/login?redirect=%2F)
+2. Install Git via this [linnk](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) if you are using RStudio desktop.
+3. Use this repository or create a [new repository.](./guides/how_to_create_a_repo.md) 
+4. Follow the introduction to Git and version control for R users [guide](./guides/intro_to_git.md). Alternatively, for Python users see [here.](https://github.com/NHSDigital/rap-community-of-practice/blob/main/development-approach/01_intro-to-git.md).
+5. Use the [Let's Git started guide](https://happygitwithr.com/index.html) for further info on connecting to Git via RStudio.
 
-1. For an introduction to Git and version control for R users see [guide](./guides/intro_to_git.md). 
-2. Learn [how to create a repository on GitHub](./guides/how_to_create_a_repo.md).
-
-* For Python users see [Introduction to Git and version control](https://github.com/NHSDigital/rap-community-of-practice/blob/main/development-approach/01_intro-to-git.md).
-
-## Exercises 
-Feel free to practice version control by making changes to the files in the Exercises folder (add, remove or edit files) and then follow the Git commands workflow to push these changes to your branch for this repository on GitHub. 
-
-Don't forget to follow the Introduction to Git and version control guide mentioned in step 1 above!
+## Practice 
+After completing the [introduction to Git and version control guide](./guides/intro_to_git.md), feel free to practice version control by making changes to the files in the practice_scripts folder (add, remove or edit files) and then follow the Git commands workflow to push these changes to your branch for this repository on GitHub. 
