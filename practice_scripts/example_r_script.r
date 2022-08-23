@@ -5,7 +5,7 @@ install.packages(c("tidyverse", "NHSRdatasets"))
 library(tidyverse)
 library(NHSRdatasets)
 
-# assing a string to a variable
+# assign a string to a variable
 myString <- "Hi, I'm using version control!"
 
 # print the variable
