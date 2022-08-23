@@ -1,4 +1,6 @@
-# this will run in python
+# to run this script, install pandas and timeit, see https://packaging.python.org/en/latest/tutorials/installing-packages/.
+# then load an IDE (install if necessary) such as VS Code, PyCharm etc.
+# run script!
 
 import pandas as pd
 import timeit
@@ -10,7 +12,7 @@ start_time = timeit.default_timer()
 
 def fahrenheit_to_celsius(temp_value):   
     """
-    Takes a temp input in Fahrenheit and computes the Celsius equivalent.
+    Takes a temperature input in Fahrenheit and computes the Celsius equivalent.
 
     Args:
         temp: Input a Fahrenheit temperature.
