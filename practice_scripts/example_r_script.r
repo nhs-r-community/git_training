@@ -1,7 +1,7 @@
 # contains example r script
 
 # install tidyverse, NHSRdatasets and run
-install.packages(c("tidyverse", "NHSRdatasets")
+install.packages(c("tidyverse", "NHSRdatasets"))
 library(tidyverse)
 library(NHSRdatasets)
 
