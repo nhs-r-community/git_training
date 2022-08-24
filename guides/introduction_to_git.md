@@ -4,20 +4,24 @@ This page is intended as a starting point for R users who are new to using Git. 
 To use Git as a team you should complete this section and the following section on [using git collaboratively](02_using-git-collaboratively.md).
 
 ## What is version control?
-Version control is the practice of tracking and managing any changes on project's code, files or folders over time. This allows you to observe a detailed history of the changes made and enables your team members to collaborate on the same project.
+Version control is the practice of tracking and managing any changes on project's code, scripts and/or project structure over time. This allows you to observe a detailed history of the changes made and enables your team members to collaborate on the same project.
+
+## What is Git?
+Git is a free open-source software used to apply version control in any file system, used in software development and data analysis projects. The [Git official distribution webpage](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F) contains a nice introduction and workflows covering more information on what is Git in detail.
  
 In Git, each user has the entire repository (project's working directory) on their computer (offline), hence, they can work separately offline until they opt to push their updated version of the code to the remote (online) central repository. 
 
-Remote repositories are versions of your project that are hosted on an online Version Control System. In NHS Digital, we store that in GitLab, site for internal users (GitHub, site for the public).
+Remote repositories are versions of your project that are hosted on an online Version Control System. In NHS Digital, we store that in GitLab, site for internal users. For the public we recommend to create an account on GitHub as the platform to share code online, either via a public or private repository.
 
 ## Why should I care?
-Using version control is one of the fundamental skills needed by analysts to produce high-quality analytical outputs. Git is **the standard** for tracking code over time and is the way that NHSD has chosen. While Git has a steep initial learning curve, the payoff is huge and so we strongly recommend taking the time to learn this as a team.
+Using version control is one of the fundamental skills needed by analysts to produce high-quality analytical outputs. Git is **the standard** for tracking code over time and is the way that NHS Digital (NHSD) has chosen. While Git has a steep initial learning curve, the payoff is huge and so we strongly recommend taking the time to learn this as a team.
 
 The benefits of using version control include:
 
 * Understanding what happened in the past. E.g., what did we change last time we ran this code
 * Restoring previous versions
 * Tracking changes - avoid accidentally breaking code
+* The ability to work on the same project collaboratively
 * The ability to review someone's changes and to leave comments
 * The ability to plan development work more effectively through being able to assign small, discrete changes
 * Avoid code being hidden away on someone's machine
@@ -25,14 +29,12 @@ The benefits of using version control include:
 * The ability to make changes without breaking anything - through running automated tests
 * The ability to try out experiments without the risk of breaking your main code
 
-# Glossary of terms
+## Glossary of terms
 Here's a list of commonly used Git terms, that will help you understand the technical jargon mentioned in the next sections:
 * [Git terminology](https://www.javatpoint.com/git-terminology)
 
-# Common basic commands:
+## Common basic commands:
 Below is a list of common commands for reference. We only list basic commands here. This is just to flag to you that these commands exist. 
-
-* [Git commands cheatsheet](https://training.github.com/downloads/github-git-cheat-sheet/)
 
 * Create a new Git repo locally: `git init`. The init command is short for "initialise", it's the command that will do all of the initial setup of a repository. The folder needs to actually exist before we can create a new repository with Git.
  
@@ -60,11 +62,18 @@ Below is a list of common commands for reference. We only list basic commands he
 
 * Delete a local branch: `git branch -D <your branch name>`.
 
+### Git commands cheat sheet
+
+* [Git commands cheatsheet](https://training.github.com/downloads/github-git-cheat-sheet/)
+
 ### Undoing changes via Git commands
 
 GitLab has a guide covering various cases on undoing any changes: https://docs.gitlab.com/ee/topics/git/numerous_undo_possibilities_in_git/
 
 # Setup for Git Basics exercise
+As a prerequisite for using RStudio desktop
+
+
 ## Creating your access token on GitHub
 There is an excellent step by step guide on [How to Create your Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) on GitHub by GitHub Docs. The process is exactly the same as GitLab (see [credentials for GitLab](https://github.com/NHSDigital/rap-community-of-practice/blob/main/development-approach/01_intro-to-git.md#creating-your-access-token)), simply input your GitHub username and access token to verify your credentials.
 
