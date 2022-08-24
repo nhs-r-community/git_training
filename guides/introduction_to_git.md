@@ -71,8 +71,7 @@ Below is a list of common commands for reference. We only list basic commands he
 GitLab has a guide covering various cases on undoing any changes: https://docs.gitlab.com/ee/topics/git/numerous_undo_possibilities_in_git/
 
 # Setup for Git Basics exercise
-As a prerequisite for using RStudio desktop
-
+As a prerequisite for using version control with RStudio desktop, a [Git installation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) is required.
 
 ## Creating your access token on GitHub
 There is an excellent step by step guide on [How to Create your Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) on GitHub by GitHub Docs. The process is exactly the same as GitLab (see [credentials for GitLab](https://github.com/NHSDigital/rap-community-of-practice/blob/main/development-approach/01_intro-to-git.md#creating-your-access-token)), simply input your GitHub username and access token to verify your credentials.
@@ -122,7 +121,7 @@ Here's the video solution to exercises 1-6: [Video exercises solution](https://v
 
 ### 1. Creating your local Git repository folder
 
-i. Open a Command terminal. This can be any terminal, Anaconda Prompt or Git Bash etc. To access the terminal, click the Search option on the Windows toolbar and type "Anaconda Prompt" and open it. The file directory address that's displayed in the terminal will usually be the default top level C drive address or something similar.
+i. Open a Command terminal. This can be any terminal, Windows Command Prompt, Anaconda Prompt or Git Bash etc. To access the terminal, click the Search option on the Windows toolbar and type "Anaconda Prompt" and open it. The file directory address that's displayed in the terminal will usually be the default top level C drive address or something similar.
 ```
 (base) C:\Windows\system32>
 ```
@@ -177,14 +176,14 @@ _**Reminder:** any changes you make while in the main branch won't be uploaded t
 
 #### Branch naming strategy
 
-Following an agreed naming convention will make it much easier to keep the team's work organised. We follow use this approach:
+Following an agreed naming convention will make it much easier to keep the team's work organised. We follow this approach:
 
-    <project_id>_<initials>_<ticket_number>_<brief-description>
+  <initials>_<brief-description>
 
 Here the project_id refers to our project ID in confluence (DS218). The initials are from my name. The ticket number refers to the jira ticket number. 
 E.g.:
 
-    DS218_CQ_167_Add-field-definitions
+   CQ_Add-field-definitions
 
 Naming branches in this way helps to make it very clear what change should be happening in the branch. Sometimes code review will reveal that a branch that was intended to make one specific change in fact makes several changes. This should be avoided and the code review should reject the additional changes.
 
