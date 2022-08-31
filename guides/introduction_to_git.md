@@ -30,7 +30,7 @@ The benefits of using version control include:
 * The ability to try out experiments without the risk of breaking your main code
 
 ## Glossary of terms
-Here's a list of commonly used Git terms, that will help you understand the technical jargon mentioned in the next sections:
+Here's a list of commonly used Git terms, keep it on hand as it will help you understand the technical jargon mentioned in the next few sections:
 * [Git terminology](https://www.javatpoint.com/git-terminology)
 
 ## Common basic commands:
@@ -189,13 +189,9 @@ Naming branches in this way helps to make it very clear what change should be ha
 
 ### 4. Add a new file
 
-By adding a new file to the project, you can avoid conflicts as each analyst will create and upload their own file.
+There are several ways to add a new file to the repository. 
 
-There are many ways to add a new file to your branch. One way is to upload a file directly to your branch on GitHub. 
-
-The easiest way is to simply create the file (any type of file) in your working directory, while in your branch. You can also copy a file from another directory. The file you create or copy can be any type of file.
-
-For this exercise, create a file while in RStudio, with simply right-clicking on the repository's folder and then selecting the Create New File option:
+For this exercise, we will create a file while in RStudio, with simply right-clicking on the repository's folder and then selecting the Create New File option:
 
 * To view and edit the repository's folders and files in RStudio:
     1. Open RStudio
@@ -259,7 +255,7 @@ To use GitHub with RStudio Cloud and not RStudio desktop, first create an accoun
 
 To submit a pull request:
 
-1. Simply head over to GitHub and to the respective repository
+1. Navigate to your repository on GitHub
 
 2. Select Pull requests on the top bar menu. 
 
@@ -269,11 +265,11 @@ To submit a pull request:
 
 5. Click Create Pull Request.
 
-6. Fill out any information related to the Pull request, title, description, any comments. On the rigth hand side you can assign yourself as the Assignee, and assign someone in your team to be the Reviewer. Then, select Create Pull Request.
-
+6. Give the Pull Request a title that summarises the changes you are proposing in a few words. Add any more detail that might help reviewers understand your changes in the 'description' section. On the right hand side you can assign yourself as the Assignee, and assign someone in your team to be the Reviewer. Then, select Create Pull Request.
+ 
 # General: How to accept a pull request
 
-Once you are assigned the pull request's reviewer, you should receive an email notification from GitHub with a link to the pull request's webpage. You can also view any active pull requests by clicking on Pull Requests on the top bar menu.
+If you are assigned as the Reviewer of a Pull Request, you should receive an email notification from GitHub with a link to the pull request's webpage. You can also view any active pull requests by clicking on Pull Requests on the top bar menu.
 
 ![](../images/pull_requests.png)
 
@@ -284,7 +280,7 @@ On the Pull request page, there are four tabs: Conversation, Commits, Checks and
 **Conversation** is the main pull request page. It contains the pull request's description, timeline and comments left by the assignee or reviewer. To merge a pull request you have 3 presented options:
 
 * Merge pull request: this will keep all commits history of the source branch and will be added to the target branch. Creates a symbolic commit.
-* Squash and merge: ticking this will merge the history of commits for the source branch into one commit. This can be useful when the pull request is not a major update and you don't want your repository's history of commits to contain commits with messages such as "fixed typo", "replaced incorrectly placed image". Creates a symbolic commit.
+* Squash and merge: ticking this will merge the history of commits for the source branch into one commit. This can be useful when the pull request is not a major update and you don't want your repository's history of commits to contain commits with messages such as "fixed typo", "replaced incorrectly placed image". Creates a merged commit.
 * Rebase and merge: adds all source branch commits in front of the target branch's commits. Does not create a symbolic commit.
 
 ### Commits
@@ -302,6 +298,12 @@ On the Pull request page, there are four tabs: Conversation, Commits, Checks and
 If you are happy to merge the two branches, then select the type of Pull Request you wish to apply and the pull request should be completed in a few seconds.
 
 # General: How to update your local main branch to the latest remote main version on GitHub/GitLab
+ 
+### Why is this useful?
+
+ 
+ 
+### How to do it?
 
 1. Open the Anaconda Prompt terminal or Git Bash or any other terminal you wish to use. This can be accessed by typing, for example Anaconda Prompt, in the search bar, after opening the search icon on your Windows toolbar.
 
