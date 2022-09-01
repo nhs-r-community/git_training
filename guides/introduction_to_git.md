@@ -269,7 +269,7 @@ To submit a pull request:
  
 # General: How to accept a pull request
 
-If you are assigned as the Reviewer of a Pull Request, you should receive an email notification from GitHub with a link to the pull request's webpage. You can also view any active pull requests by clicking on Pull Requests on the top bar menu.
+If you are assigned as the reviewer of a pull request, you should receive an email notification from GitHub with a link to the pull request's webpage. You can also view any active pull requests by clicking on pull requests on the top bar menu.
 
 ![](../images/pull_requests.png)
 
@@ -295,17 +295,16 @@ On the Pull request page, there are four tabs: Conversation, Commits, Checks and
 
 **Checks** is part of the GitHub Actions functionality, which enchances your code review processes with apps and automated reviewing checks. This is inactive on default.
 
-If you are happy to merge the two branches, then select the type of Pull Request you wish to apply and the pull request should be completed in a few seconds.
+If you are happy to merge the two branches, then select the type of pull request you wish to apply and the pull request should be completed in a few seconds.
 
 # General: How to update your local main branch to the latest remote main version on GitHub/GitLab
  
 ### Why is this useful?
+Before submitting a merge request, your branch is required to be up to date with contents from the main branch. If you try to merge your branch with the main branch without doing so, Git/GitHub will potentially trigger a merge conflict warning, that your branch is not up to date with main and potentially outdated versions on your  branch will collide with newer versions on main.
 
- 
- 
 ### How to do it?
 
-1. Open the Anaconda Prompt terminal or Git Bash or any other terminal you wish to use. This can be accessed by typing, for example Anaconda Prompt, in the search bar, after opening the search icon on your Windows toolbar.
+1. Open a command terminal. This can be accessed by typing, for example Anaconda Prompt, in the search bar, after opening the search icon on your Windows toolbar.
 
 2. Type ```cd <paste your work directory address>``` in the terminal to switch to your working directory. This is where the Git repository is cloned/copied/downloaded to, on your local machine (or RDS environment or any environment you're using). This will cause the default terminal address to be directed at the new directory. (see [Git Clone instructions above](01_intro-to-git.md#3-git-clone-copydownload-a-gitlab-repository)  for more info)
 
