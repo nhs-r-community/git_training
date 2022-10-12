@@ -1,0 +1,16 @@
+### R ###
+# History files
+.Rhistory
+
+# Session Data files
+.RData
+
+# User-specific files
+.Ruserdata
+
+# RStudio files
+.Rproj.user/
+*.Rproj
+
+# R Environment Variables
+.Renviron
