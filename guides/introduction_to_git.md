@@ -70,8 +70,12 @@ Below is a list of common commands for reference. We only list basic commands he
 
 GitLab has a guide covering various cases on undoing any changes: https://docs.gitlab.com/ee/topics/git/numerous_undo_possibilities_in_git/
 
-# Setup for Git Basics exercise
-As a prerequisite for using version control with RStudio desktop, a [Git installation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) is required.
+# Git started: Setup for Git Basics exercise
+As a prerequisite for using version control with RStudio desktop or RStudio Cloud:
+
+* Install Git via [Git installation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) is required.
+
+* Then, create a GitHub account, it's free!
 
 ## Creating your access token on GitHub
 There is an excellent step by step guide on [How to Create your Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) on GitHub by GitHub Docs. The process is exactly the same as GitLab (see [credentials for GitLab](https://github.com/NHSDigital/rap-community-of-practice/blob/main/development-approach/01_intro-to-git.md#creating-your-access-token)), simply input your GitHub username and access token to verify your credentials.
@@ -249,7 +253,7 @@ To use GitHub with RStudio Cloud and not RStudio desktop, first create an accoun
 
 ![](../images/terminal.png)
 
-# General: How to submit a pull request
+# How to: Submit a pull request
 
 **Pull request (PR)** is the application you submit on the GitHub repository, to announce to other collaborators working on the repository that you have a new change ready to be merged/part of the main build, the main branch of the repository. Then, either your collaborators or someone you assign will review the change and the branch you have been working on to determine whether the change is ready to be merged with the main branch. The equivalent term for GitLab users is Merge Request (MR).
 
@@ -267,9 +271,11 @@ To submit a pull request:
 
 6. Give the Pull Request a title that summarises the changes you are proposing in a few words. Add any more detail that might help reviewers understand your changes in the 'description' section. On the right hand side you can assign yourself as the Assignee, and assign someone in your team to be the Reviewer. Then, select Create Pull Request.
  
-# General: How to accept a pull request
+# How to: Accept a pull request
 
 If you are assigned as the reviewer of a pull request, you should receive an email notification from GitHub with a link to the pull request's webpage. You can also view any active pull requests by clicking on pull requests on the top bar menu.
+ 
+ > For more info on Code Reviews and why they matter, visit [here](https://github.com/NHSDigital/rap-community-of-practice/blob/main/implementing_RAP/general_guidance/code-review.md).
 
 ![](../images/pull_requests.png)
 
@@ -297,7 +303,7 @@ On the Pull request page, there are four tabs: Conversation, Commits, Checks and
 
 If you are happy to merge the two branches, then select the type of pull request you wish to apply and the pull request should be completed in a few seconds.
 
-# General: How to update your local main branch to the latest remote main version on GitHub/GitLab
+# How to: Update your local main branch to the latest remote main version on GitHub/GitLab
  
 ### Why is this useful?
 Before submitting a merge request, your branch is required to be up to date with contents from the main branch. If you try to merge your branch with the main branch without doing so, Git/GitHub will potentially trigger a merge conflict warning, that your branch is not up to date with main and potentially outdated versions on your  branch will collide with newer versions on main.
@@ -316,10 +322,13 @@ Before submitting a merge request, your branch is required to be up to date with
 
 (Optional) 5. If you're in a different branch and not the main branch, then type in the terminal ```git checkout main``` and then ```git status``` to confirm you are on the main branch.
 
-# General: the .gitignore file
+# What is: the .gitignore file
 .gitignore is a text file that contains file extensions and directories' paths that we wish Git to ignore. For example, we have created a repository on GitHub that should never contain any sensitive data. To ensure this, in the repository's .gitignore file we will include ```.csv```, `.xlsx` or any other file format that can contain data.
 
 GitHub has a .gitignore [template](https://github.com/github/gitignore/blob/main/R.gitignore) available to analysts and developers to use in their projects. Notice how in the template, line 22 contain RStudio project settings, which are configuration files created by RStudio when you first open your repository as an RStudio project. Sometimes these configuration files can contain information you don't want to publish on GitHub/GitLab, thus by including them in the .gitignore file you are ensuring that these files will never leave your local machine.
+ 
+# What is: the README.md file
+
 
 # External links
 * [GitHub Docs - Pull requests](https://docs.github.com/en/pull-requests)
