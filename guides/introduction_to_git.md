@@ -138,7 +138,7 @@ ii. Create a folder in your local directory, this is where the GitHub (remote) r
 
 > If you're using GitLab instead of GitHub, these [steps](https://github.com/NHSDigital/rap-community-of-practice/blob/main/docs/training_resources/git/intro-to-git.md#2-git-clone-copydownload-a-gitlab-repository) will help you set up.
 
-i. The repository's clone URL will be on the GitHub repository's main page (see image below).
+i. The repository's clone URL will be on the GitHub repository's main page, click on the green Clone button (see image below).
 
 ![](../images/git_clone.png)
 
@@ -198,7 +198,7 @@ There are several ways to add a new file to the repository.
 For this exercise, we will create a file while in RStudio, with simply right-clicking on the repository's folder and then selecting the Create New File option:
 
 * To view and edit the repository's folders and files in RStudio:
-    1. Open RStudio
+    1. Open RStudio desktop (if it's not already open).
     2. On the top toolbar go File -> New Project, this will open a Create New Project dialogue.
 
     ![](../images/new_project.png)
@@ -243,7 +243,7 @@ To use GitHub with RStudio Cloud and not RStudio desktop, first create an accoun
 
 ![](../images/new_project_git.png)
 
-* This will open a new dialogue that will ask for the Git Repository URL, this is the URL you copy, as described in [Step 2](01_intro_to_git.md#2-git-clone-copy-a-github-repository) of this guide. 
+* This will open a new dialogue that will ask for the Git Repository URL, this is the URL you copy, as described in [Step 2](introduction_to_git.md#2-git-clone-copy-a-github-repository) of this guide. 
 * You will be prompted to enter your username (GitHub username) and your password, which is the access token created from the [Create Access token step](introduction_to_git.md#creating-your-access-token-on-github).
 * Once the Git repository is deployed, you will notice the repository file structure on the right hand side panel.
 
