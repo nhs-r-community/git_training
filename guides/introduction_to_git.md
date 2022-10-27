@@ -125,7 +125,7 @@ Here's the video solution to exercises 1-6: [Video exercises solution](https://v
 
 ### 1. Creating your local Git repository folder
 
-i. Open a Command terminal. This can be any terminal, Windows Command Prompt, Anaconda Prompt or Git Bash etc. To access the terminal, click the Search option on the Windows toolbar and type "Anaconda Prompt" and open it. The file directory address that's displayed in the terminal will usually be the default top level C drive address or something similar.
+i. Open a Command terminal. This can be any terminal, we could use the built-in RStudio Desktop terminal or a separate terminal such as Windows Command Prompt, Anaconda Prompt or Git Bash etc. For example, to access Anaconda Prompt, click the Search option on the Windows toolbar and type "Anaconda Prompt" and open it. The file directory address that's displayed in the terminal will usually be the default top level C drive address or something similar.
 ```
 (base) C:\Windows\system32>
 ```
@@ -136,7 +136,7 @@ ii. Create a folder in your local directory, this is where the GitHub (remote) r
 ```
 ### 2. Git clone (copy a GitHub repository)
 
-> If you're using GitLab instead of GitHub, these [steps](https://github.com/NHSDigital/rap-community-of-practice/blob/main/development-approach/01_intro-to-git.md#2-git-clone-copydownload-a-gitlab-repository) will help you set up.
+> If you're using GitLab instead of GitHub, these [steps](https://github.com/NHSDigital/rap-community-of-practice/blob/main/docs/training_resources/git/intro-to-git.md#2-git-clone-copydownload-a-gitlab-repository) will help you set up.
 
 i. The repository's clone URL will be on the GitHub repository's main page (see image below).
 
