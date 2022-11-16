@@ -9,31 +9,31 @@ In the video below, you can view the git workflow that's follows the changes mad
 _Disclaimer: the above video will not load for external users._
 
 - **In GitLab**, click on "Branches" in the "Repository" menu on the left hand side.
-    - Click the "New branch" blue button.
-    - Type a suitable name for your branch.
-    - Create from master. Click "Create branch"
+  - Click the "New branch" blue button.
+  - Type a suitable name for your branch.
+  - Create from master. Click "Create branch"
 - **In the command prompt**, navigate to your repository folder, using `cd <folder_name>`
-    - `git pull`
-    - `git branch -a` to see all the available branches, including the one you just created
-    - `git checkout <branch name>`
+  - `git pull`
+  - `git branch -a` to see all the available branches, including the one you just created
+  - `git checkout <branch name>`
 - **In your editor** Make your code changes
-    - Save the changes
+  - Save the changes
 - **In the command prompt**, `git status` to check which files you've altered
-    - `git add.` if you're happy to add all the changed files, or `git add <file_name>` if you just want one file.
-    - `git commit -m "comment on what you've changed"`
-    - `git push`
+  - `git add.` if you're happy to add all the changed files, or `git add <file_name>` if you just want one file.
+  - `git commit -m "comment on what you've changed"`
+  - `git push`
 - **In GitLab**, click on "Merge requests" in the left hand menu.
-    - Click the "New merge request" blue button.
-    - Choose the branch you want to merge and the target branch (usually master)
-    - Write a description which will be helpful to the reviewer.
-    - Assign a reviewer.
-    - Tick "Delete source branch when merge request is accepted"
-    - Click the "Create merge request" blue button.
-    - Review code changes with the reviewer, and ask the reviewer to accept the merge request.
+  - Click the "New merge request" blue button.
+  - Choose the branch you want to merge and the target branch (usually master)
+  - Write a description which will be helpful to the reviewer.
+  - Assign a reviewer.
+  - Tick "Delete source branch when merge request is accepted"
+  - Click the "Create merge request" blue button.
+  - Review code changes with the reviewer, and ask the reviewer to accept the merge request.
 - **In the command prompt**, `git checkout master`, `git pull` to get the latest code.
-    - delete the branch locally, with `git branch -D <branch_name>`
-    - `git branch -a` to check that your branch has been deleted.
-    - `git checkout master`, then `git pull`, then open the code in Spyder to check that your changes are in the master.
+  - delete the branch locally, with `git branch -D <branch_name>`
+  - `git branch -a` to check that your branch has been deleted.
+  - `git checkout master`, then `git pull`, then open the code in Spyder to check that your changes are in the master.
 
 ## Resolving merge conflicts
 
@@ -57,7 +57,7 @@ Before raising a merge request, you should see if there are likely to be any con
 This will attempt to automatically merge the latest version of the master into your branch. If no-one else has changed the same lines of code as you, this will be fine and you can continue to raising a merge request as above.
 If not, you will get an error: `Automatic merge failed`, `Merge conflict in <file name>` and `CONFLICT` messages will appear on the terminal:
 
-```
+```git
 Auto-merging practice/temperatures_function.py
 CONFLICT (content): Merge Conflict in practice/temperatures_function.py
 Automatic merge failed; fix conflicts and then commit the result.
@@ -70,7 +70,7 @@ Different editors give us differenttools for handling these merge conflicts, tho
 - **In Spyder**, open that file (in this case temperatures_function.py).
 - Scroll in the document to find the conflict. You will notice these strange lines where conflict has occured:
 
-```
+```git
 <<<<<< HEAD
 This line is the line in my branch.
 =======
@@ -80,7 +80,7 @@ This line is the line in master.
 
 The top bit above the double line is what we have in our branch (our branch is represented by the `<<<<<<< HEAD` statement). The bottom bit is the same line but it's saved in the master branch (symbolised as `>>>>>>> master`). To resolve the conflict, delete the line which you do not wish to keep, including the arrows and double lines. So for example, if you wish to keep `This line is the line in my branch` delete everything that's connected to the conflict so that it also shows this in your text editor:
 
-```
+```text
 This line is the line in my branch.
 ```
 
@@ -89,7 +89,7 @@ This line is the line in my branch.
 - **In Visual Studio Code**, you can open your file browser in the tools tab. Any files which have a merge conflict will have a little 'C' next to them here. Open the files which have these conflicts (in this case temperatures_function.py).
 - Scroll in the document to find the conflict. You will notice these strange lines where conflict has occured:
 
-```
+```text
 <<<<<< HEAD
 This line is the line in my branch.
 =======
@@ -101,7 +101,7 @@ The top bit above the double line is what we have in our branch (our branch is r
 So for example, if you wish to keep `This line is the line in my branch` delete everything that's connected to the conflict so that it also shows this in your text editor:
 When your're done, simply save the file.
 
-```
+```text
 This line is the line in my branch.
 ```
 
@@ -109,7 +109,7 @@ This line is the line in my branch.
 
 - Save your changes, and then update your branch in the usual way:
 
-```
+```git
 git status
 git add .
 git status
