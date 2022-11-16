@@ -75,7 +75,8 @@ GitLab has a guide covering various cases on undoing any changes: https://docs.g
 ## Git started: Setup for Git Basics exercise
 As a prerequisite for using version control with RStudio desktop or RStudio Cloud:
 
-### 1. Create a GitHub account, it's free!
+### 1. Create a GitHub account
+Visit this [link](https://github.com/join) to create a GitHub account, it's free!
 
 ### 2. Create your access token on GitHub
 There is an excellent step by step guide on [How to Create your Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) on GitHub by GitHub Docs. The process is exactly the same as GitLab (see [credentials for GitLab](https://github.com/NHSDigital/rap-community-of-practice/blob/main/docs/training_resources/git/intro-to-git.md#creating-your-access-token)), simply input your GitHub username and access token to verify your credentials.
