@@ -1,5 +1,7 @@
 # Overview
-This page is intended as a starting point for R users who are new to using Git. It shows you the basic commands and the workflow to use Git on your own, in conjunction with using RStudio desktop or RStudio Cloud. 
+> Feel free to use the table of contents attached to the top left of this guide for quicker navigation!
+
+This page is intended as a starting point for R users who are new to using Git. It shows you the basic commands and the workflow to use Git on your own, in conjunction with using RStudio Desktop or RStudio Cloud. 
 
 To use Git as a team you should complete this section and the following section on [using git collaboratively](./using_git_collaboratively.md).
 
@@ -73,15 +75,9 @@ GitLab has a guide covering various cases on undoing any changes: https://docs.g
 ## Git started: Setup for Git Basics exercise
 As a prerequisite for using version control with RStudio desktop or RStudio Cloud:
 
-**Software to use for exercises:**
-1. [RStudio Desktop](#using-rstudio-desktop)
-2. [RStudio Cloud](#using-rstudio-cloud)
+### 1. Create a GitHub account, it's free!
 
-* Install Git via [Git installation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) is required.
-
-* Then, create a GitHub account, it's free!
-
-### Creating your access token on GitHub
+### 2. Create your access token on GitHub
 There is an excellent step by step guide on [How to Create your Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) on GitHub by GitHub Docs. The process is exactly the same as GitLab (see [credentials for GitLab](https://github.com/NHSDigital/rap-community-of-practice/blob/main/docs/training_resources/git/intro-to-git.md#creating-your-access-token)), simply input your GitHub username and access token to verify your credentials.
 
 When selecting the access token's scope, the default options that should be ticked are: repo, admin:repo_hook and delete_repo.
@@ -91,7 +87,7 @@ When selecting the access token's scope, the default options that should be tick
 #### Video: How to create an access token on GitHub
 Here's a video on how to create the access token on GitHub: [Access token video](https://vimeo.com/678170438)
 
-### HTTPS vs SSH key
+#### HTTPS vs SSH key
 You might come across SSH protocol keys, as it is essentially another option to create a password and verify your credentials. This section on [HTTPS vs SSH](https://happygitwithr.com/https-pat.html#https-vs-ssh) protocol options of setting up credentials on GitHub explains the differences between these two options. There are pros and cons for both, we would recommend the HTTPS option for Git beginners.
 
 #### Troubleshooting credentials
@@ -122,10 +118,14 @@ C:\My_documents>git clone https://<username>:<MY_NEW_ACCESS_TOKEN>@<domain>/exam
 ## Exercises 1 - 6: Accessing a Git repository, creating a branch, adding a new file, uploading your changes to GitHub
 **Getting started** - tasks 1 and 2 will be relevant only when accessing a repository for the **first time**.
 
-#### Video: Solution to exercises 1 - 6 (Using RStudio Desktop)
-Here's the video solution to exercises 1-6: [Video exercises solution](https://vimeo.com/678172959)
+**Please select your software of choice to follow the training:**
+1. Using [RStudio Desktop](#using-rstudio-desktop)
+2. Using [RStudio Cloud](#using-rstudio-cloud)
 
 ### Using RStudio Desktop
+
+* Install Git via [Git installation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) is required.
+* Video: Solution to exercises 1 - 6 (Using RStudio Desktop). Here's the video solution to exercises 1-6: [Video exercises solution](https://vimeo.com/678172959)
 
 #### 1. Creating your local Git repository folder
 
