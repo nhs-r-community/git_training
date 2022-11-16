@@ -117,13 +117,13 @@ So, in my case it would be:
 C:\My_documents>git clone https://<username>:<MY_NEW_ACCESS_TOKEN>@<domain>/example.git 
 ```
 ## Exercises 1 - 6: Accessing a Git repository, creating a branch, adding a new file, uploading your changes to GitHub
-**Getting started** - tasks 1 and 2 will be relevant only when accessing a repository for the **first time**.
 
 **Please select your software of choice to follow the training:**
 1. Using [RStudio Desktop](#using-rstudio-desktop)
 2. Using [RStudio Cloud](#using-rstudio-cloud)
 
 ### Using RStudio Desktop
+**Getting started** - tasks 1 and 2 will be relevant only when accessing a repository for the **first time**.
 
 * Install Git via [Git installation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) is required.
 * Video: Solution to exercises 1 - 6 (Using RStudio Desktop). Here's the video solution to exercises 1-6: [Video exercises solution](https://vimeo.com/678172959)
