@@ -138,14 +138,14 @@ C:\My_documents>git clone https://<username>:<MY_NEW_ACCESS_TOKEN>@<domain>/exam
 
 ## Exercises 1 - 6: Accessing a Git repository, creating a branch, adding a new file, uploading your changes to GitHub
 
-**Getting started** - tasks 1 and 2 will be relevant only when accessing a repository for the **first time**.
-
 **Please select your software of choice to follow the training:**
 
 1. Using [RStudio Desktop](#using-rstudio-desktop)
 2. Using [RStudio Cloud](#using-rstudio-cloud)
 
 ### Using RStudio Desktop
+
+**Getting started** - tasks 1 and 2 will be relevant only when accessing a repository for the **_first time_**.
 
 * Install Git via [Git installation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) is required.
 * Video: Solution to exercises 1 - 6 (Using RStudio Desktop). Here's the video solution to exercises 1-6: [Video exercises solution](https://vimeo.com/678172959)
@@ -158,7 +158,7 @@ i. Open a Command terminal. This can be any terminal, we could use the built-in 
 (base) C:\Windows\system32>
 ```
 
-ii. Create a folder in your local directory, this is where the GitHub (remote) repository will be copied/downloaded to. In the Anaconda Prompt terminal type ```cd <windows explorer repo folder address you just created>```, ```cd``` stands for Change Directory, and what this means is that the default terminal address will be directed to the new directory, the new folder address. Any Git commands applied in the terminal will apply to the current directory.
+ii. Create a folder in your local directory, this is where the GitHub (remote) repository will be copied/downloaded to. In the Anaconda Prompt terminal type ```cd <windows explorer repo folder address you just created>```, ```cd``` stands for `change directory`, and what this means is that the default terminal address will be directed to the new directory, the new folder address. Any Git commands applied in the terminal will apply to the current directory.
 
 ```
 (base) C:\Windows\system32>cd C:\Users\<username>\Documents\my_project_folder\demo
@@ -224,7 +224,7 @@ E.g.:
 
 Naming branches in this way helps to make it very clear what change should be happening in the branch. Sometimes code review will reveal that a branch that was intended to make one specific change in fact makes several changes. This should be avoided and the code review should reject the additional changes.
 
-#### 4. Add a new file
+#### 4. Add a new file (**for RStudio Cloud users, jump to step iv below)**
 
 There are several ways to add a new file to the repository.
 
@@ -252,7 +252,7 @@ For this exercise, we will create a file while in RStudio, with simply right-cli
 
 #### 5. Commit your changes (follow standard Git command workflow)
 
-In the Anaconda Prompt (or any terminal of your choice) type the following. I suggest you read through the git messages displayed after each command entered in the terminal, to familiarise yourself with the logic.
+In Anaconda Prompt (or any terminal of your choice) or the RStudio Cloud built-in terminal type the following. I suggest you read through the git messages displayed after each command entered in the terminal, to familiarise yourself with the logic.
 
 i. Type ```git status``` to see the modifications that haven't been staged yet (in red colour).
 
