@@ -1,21 +1,25 @@
 # Overview
+
 > Feel free to use the table of contents attached to the top left of this guide for quicker navigation!
 
-This page is intended as a starting point for R users who are new to using Git. It shows you the basic commands and the workflow to use Git on your own, in conjunction with using RStudio Desktop or RStudio Cloud. 
+This page is intended as a starting point for R users who are new to using Git. It shows you the basic commands and the workflow to use Git on your own, in conjunction with using RStudio Desktop or RStudio Cloud.
 
 To use Git as a team you should complete this section and the following section on [using git collaboratively](./using_git_collaboratively.md).
 
 ## What is version control?
+
 Version control is the practice of tracking and managing any changes on project's code, scripts and/or project structure over time. This allows you to observe a detailed history of the changes made and enables your team members to collaborate on the same project.
 
 ## What is Git?
+
 Git is a free open-source software used to apply version control in any file system, used in software development and data analysis projects. The [Git official distribution webpage](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F) contains a nice introduction and workflows covering more information on what is Git in detail.
- 
-In Git, each user has the entire repository (project's working directory) on their computer (offline), hence, they can work separately offline until they opt to push their updated version of the code to the remote (online) central repository. 
+
+In Git, each user has the entire repository (project's working directory) on their computer (offline), hence, they can work separately offline until they opt to push their updated version of the code to the remote (online) central repository.
 
 Remote repositories are versions of your project that are hosted on an online Version Control System. In NHS Digital, we store that in GitLab, site for internal users. For the public we recommend to create an account on GitHub as the platform to share code online, either via a public or private repository.
 
 ## Why should I care?
+
 Using version control is one of the fundamental skills needed by analysts to produce high-quality analytical outputs. Git is **the standard** for tracking code over time and is the way that NHS Digital (NHSD) has chosen. While Git has a steep initial learning curve, the payoff is huge and so we strongly recommend taking the time to learn this as a team.
 
 The benefits of using version control include:
@@ -32,14 +36,17 @@ The benefits of using version control include:
 * The ability to try out experiments without the risk of breaking your main code
 
 ### Glossary of terms
+
 Here's a list of commonly used Git terms, keep it on hand as it will help you understand the technical jargon mentioned in the next few sections:
+
 * [Git terminology](https://www.javatpoint.com/git-terminology)
 
-### Common basic commands:
-Below is a list of common commands for reference. We only list basic commands here. This is just to flag to you that these commands exist. 
+### Common basic commands
+
+Below is a list of common commands for reference. We only list basic commands here. This is just to flag to you that these commands exist.
 
 * Create a new Git repo locally: `git init`. The init command is short for "initialise", it's the command that will do all of the initial setup of a repository. The folder needs to actually exist before we can create a new repository with Git.
- 
+
 * Clone an existing Git Repository: `git clone <url>`. Happens only once, when you need to create a local copy of a Git repository.
 
 * Check whether any files have changed in a repository: `git status`. It lists the files you've changed and those you still need to add or commit. It displays the state of the working directory and the staging area. It lets you see which changes have been staged, which haven't, and which files aren't being tracked by Git. Status output does not show you any information regarding the committed project history.
@@ -54,8 +61,8 @@ Below is a list of common commands for reference. We only list basic commands he
 
 * Update your branch with the online/remote branch info: `git pull`. Pulls the latest changes from the repository, only affects the current active branch you’re in.
 
-* Check the history of commits: `git log`. 
- 
+* Check the history of commits: `git log`.
+
 * Show unstaged changes between your index and working directory: `git diff`. Press `Q` to exit the diff log.
 
 * Ignore files: `.gitignore file`. This file specifies untracked files that Git should ignore such as the sensitive information related to security or the data itself. Files already tracked by Git are not affected.
@@ -70,36 +77,45 @@ Below is a list of common commands for reference. We only list basic commands he
 
 ### Undoing changes via Git commands
 
-GitLab has a guide covering various cases on undoing any changes: https://docs.gitlab.com/ee/topics/git/numerous_undo_possibilities_in_git/
+GitLab has a guide covering various cases on undoing any changes: <https://docs.gitlab.com/ee/topics/git/numerous_undo_possibilities_in_git/>
 
 ## Git started: Setup for Git Basics exercise
+
 As a prerequisite for using version control with RStudio desktop or RStudio Cloud:
 
 ### 1. Create a GitHub account
+
 Visit this [link](https://github.com/join) to create a GitHub account, it's free!
 
 ### 2. Create your access token on GitHub
+
 There is an excellent step by step guide on [How to Create your Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) on GitHub by GitHub Docs. The process is exactly the same as GitLab (see [credentials for GitLab](https://github.com/NHSDigital/rap-community-of-practice/blob/main/docs/training_resources/git/intro-to-git.md#creating-your-access-token)), simply input your GitHub username and access token to verify your credentials.
 
 When selecting the access token's scope, the default options that should be ticked are: repo, admin:repo_hook and delete_repo.
 
-**Do not** forget to paste/save your access token somewhere safe as you won't be able to access it again. 
+**Do not** forget to paste/save your access token somewhere safe as you won't be able to access it again.
 
 #### Video: How to create an access token on GitHub
+
 Here's a video on how to create the access token on GitHub: [Access token video](https://vimeo.com/678170438)
 
 #### HTTPS vs SSH key
+
 You might come across SSH protocol keys, as it is essentially another option to create a password and verify your credentials. This section on [HTTPS vs SSH](https://happygitwithr.com/https-pat.html#https-vs-ssh) protocol options of setting up credentials on GitHub explains the differences between these two options. There are pros and cons for both, we would recommend the HTTPS option for Git beginners.
 
 #### Troubleshooting credentials
+
 You might see something like this at any point:
+
 ```
 remote: HTTP Basic: Access denied
 remote: You must use a personal access with 'read_repository or 'write_repository' scope for Git over HTTP.
 remote: You can generate one at https:// etc etc...
 remote: Authentication failed for 'repository address you're attempting to git clone'
 ```
-This can mean a number of things: either your access token has expired or you have entered the wrong access token for your password (or username even). If your access token has expired or about to expire, you can check by going to Gitlab Profile -> Preferences -> Access Tokens then scroll all the way down and see if there’s an Active Access Token and check the expiration date. 
+
+This can mean a number of things: either your access token has expired or you have entered the wrong access token for your password (or username even). If your access token has expired or about to expire, you can check by going to Gitlab Profile -> Preferences -> Access Tokens then scroll all the way down and see if there’s an Active Access Token and check the expiration date.
+
 * These steps will help you fix your access to the repository:
 
 1. To fix this we need to create a new access token (don’t assign a date this time, so it will never expire).
@@ -109,20 +125,26 @@ This can mean a number of things: either your access token has expired or you ha
 * If you don't have an existing repository, and can't do step 2, then:
 
 1. In the terminal type ```git clone <git repo's copied clone url>``` but with the new credentials included in the URL, so:
+
 ```
 C:\My_documents>git clone https://<username>:<password>@<domain>/example.git 
 ```
+
 So, in my case it would be:
+
 ```
 C:\My_documents>git clone https://<username>:<MY_NEW_ACCESS_TOKEN>@<domain>/example.git 
 ```
+
 ## Exercises 1 - 6: Accessing a Git repository, creating a branch, adding a new file, uploading your changes to GitHub
 
 **Please select your software of choice to follow the training:**
+
 1. Using [RStudio Desktop](#using-rstudio-desktop)
 2. Using [RStudio Cloud](#using-rstudio-cloud)
 
 ### Using RStudio Desktop
+
 **Getting started** - tasks 1 and 2 will be relevant only when accessing a repository for the **_first time_**.
 
 * Install Git via [Git installation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) is required.
@@ -131,14 +153,18 @@ C:\My_documents>git clone https://<username>:<MY_NEW_ACCESS_TOKEN>@<domain>/exam
 #### 1. Creating your local Git repository folder
 
 i. Open a Command terminal. This can be any terminal, we could use the built-in RStudio Desktop terminal or a separate terminal such as Windows Command Prompt, Anaconda Prompt or Git Bash etc. For example, to access Anaconda Prompt, click the Search option on the Windows toolbar and type "Anaconda Prompt" and open it. The file directory address that's displayed in the terminal will usually be the default top level C drive address or something similar.
+
 ```
 (base) C:\Windows\system32>
 ```
+
 ii. Create a folder in your local directory, this is where the GitHub (remote) repository will be copied/downloaded to. In the Anaconda Prompt terminal type ```cd <windows explorer repo folder address you just created>```, ```cd``` stands for `change directory`, and what this means is that the default terminal address will be directed to the new directory, the new folder address. Any Git commands applied in the terminal will apply to the current directory.
+
 ```
 (base) C:\Windows\system32>cd C:\Users\<username>\Documents\my_project_folder\demo
 (base) C:\Users\<username>\Documents\my_project_folder\demo>
 ```
+
 #### 2. Git clone (copy a GitHub repository)
 
 > If you're using GitLab instead of GitHub, these [steps](https://github.com/NHSDigital/rap-community-of-practice/blob/main/docs/training_resources/git/intro-to-git.md#2-git-clone-copydownload-a-gitlab-repository) will help you set up.
@@ -148,9 +174,11 @@ i. The repository's clone URL will be on the GitHub repository's main page, clic
 ![](../images/git_clone.png)
 
 ii. Type ```git clone <repository's clone url>``` the git-demo repository using your local terminal. Enter your credentials when prompted (GitHub username and access token for the password.)
+
 ```
 (base) C:\Users\<username>\Documents\my_project_folder\demo>git clone <paste the repo url address from the image above> 
 ```
+
 iii. Type ```cd <windows explorer repo folder address>``` (open the newly downloaded git folder) in the terminal to assign the root level of the directory to the top level of the repository. This because the terminal is assigned to the folder containing the Git repository, not the folder that IS the Git repository.
 
 iv. Type ```git status``` in the terminal. You should see the this message:
@@ -189,16 +217,16 @@ Following an agreed naming convention will make it much easier to keep the team'
 
   <initials>_<brief-description>
 
-Here the project_id refers to our project ID in confluence (DS218). The initials are from my name. The ticket number refers to the jira ticket number. 
+Here the project_id refers to our project ID in confluence (DS218). The initials are from my name. The ticket number refers to the jira ticket number.
 E.g.:
 
    CQ_Add-field-definitions
 
 Naming branches in this way helps to make it very clear what change should be happening in the branch. Sometimes code review will reveal that a branch that was intended to make one specific change in fact makes several changes. This should be avoided and the code review should reject the additional changes.
 
-#### 4. Add a new file (**for RStudio Cloud users, jump to step iv below)**.
+#### 4. Add a new file (**for RStudio Cloud users, jump to step iv below)**
 
-There are several ways to add a new file to the repository. 
+There are several ways to add a new file to the repository.
 
 For this exercise, we will create a file while in RStudio, with simply right-clicking on the repository's folder and then selecting the Create New File option:
 
@@ -213,7 +241,7 @@ For this exercise, we will create a file while in RStudio, with simply right-cli
     ![](../images/create_new_project.png)
 
     4. You should be able to see the project structure on the lower right hand side windown as it is displayed on GitHub.
-    
+
     ![](../images/project_structure.png)
 
     5. On the top toolbar select File -> New File -> Rscript and save the file somewhere in your repository (don't forget to name your Rscipt!).
@@ -239,16 +267,18 @@ v. Type ```git status``` to view the status of your repo. There should be no mod
 vi. Type ```git push```. This command will upload all your commited changes to GitHub.
 
 #### 6. Check the repository on GitHub to view the changes updated
+
 Simply head over to GitHub, and the repository page on GitHub, select your branch and compare the changes between your branch and the master branch.
 
 ### Using RStudio Cloud
+
 To use GitHub with RStudio Cloud and not RStudio desktop, first create an account with RStudio Cloud. RStudio Cloud has a detailed [guide](https://rstudio.cloud/learn/guide) on how to create projects, how to manage workspaces within the Cloud, how to handle permissions and teaching spaces.
 
 * To create a project from GitHub, select the "Your Workspace" option on the left hand side once in RStudio Cloud and select New Project on the far right of the top toolbar, in the Your Projects space.
 
 ![](../images/new_project_git.png)
 
-* This will open a new dialogue that will ask for the Git Repository URL, this is the URL you copy, as described in [Step 2](introduction_to_git.md#2-git-clone-copy-a-github-repository) of this guide. 
+* This will open a new dialogue that will ask for the Git Repository URL, this is the URL you copy, as described in [Step 2](introduction_to_git.md#2-git-clone-copy-a-github-repository) of this guide.
 * You will be prompted to enter your username (GitHub username) and your password, which is the access token created from the [Create Access token step](introduction_to_git.md#creating-your-access-token-on-github).
 * Once the Git repository is deployed, you will notice the repository file structure on the right hand side panel.
 
@@ -266,7 +296,7 @@ To submit a pull request:
 
 1. Navigate to your repository on GitHub
 
-2. Select Pull requests on the top bar menu. 
+2. Select Pull requests on the top bar menu.
 
 3. Either select New Pull Request (big green button) on the right hand side or select Compare & pull request if you recently pushed new changes to the branch.
 
@@ -275,11 +305,11 @@ To submit a pull request:
 5. Click Create Pull Request.
 
 6. Give the Pull Request a title that summarises the changes you are proposing in a few words. Add any more detail that might help reviewers understand your changes in the 'description' section. On the right hand side you can assign yourself as the Assignee, and assign someone in your team to be the Reviewer. Then, select Create Pull Request.
- 
+
 ## How to: Accept a pull request
 
 If you are assigned as the reviewer of a pull request, you should receive an email notification from GitHub with a link to the pull request's webpage. You can also view any active pull requests by clicking on pull requests on the top bar menu.
- 
+
  > For more info on Code Reviews and why they matter, visit [here](https://github.com/NHSDigital/rap-community-of-practice/blob/main/docs/implementing_RAP/code-review.md).
 
 ![](../images/pull_requests.png)
@@ -309,8 +339,9 @@ On the Pull request page, there are four tabs: Conversation, Commits, Checks and
 If you are happy to merge the two branches, then select the type of pull request you wish to apply and the pull request should be completed in a few seconds.
 
 ## How to: Update your local main branch to the latest remote main version on GitHub/GitLab
- 
+
 ### Why is this useful?
+
 Before submitting a merge request, your branch is required to be up to date with contents from the main branch. If you try to merge your branch with the main branch without doing so, Git/GitHub will potentially trigger a merge conflict warning, that your branch is not up to date with main and potentially outdated versions on your  branch will collide with newer versions on main.
 
 ### How to do it?
@@ -319,7 +350,7 @@ Before submitting a merge request, your branch is required to be up to date with
 
 2. Type ```cd <paste your work directory address>``` in the terminal to switch to your working directory. This is where the Git repository is cloned/copied/downloaded to, on your local machine (or RDS environment or any environment you're using). This will cause the default terminal address to be directed at the new directory. (see [Git Clone instructions above](introduction_to_git.md#2-git-clone-copy-a-github-repository)  for more info)
 
-3. Type ```git status``` in the terminal to ensure that ```ii``` happened successfully and you are on the default main branch. You should see this message: 
+3. Type ```git status``` in the terminal to ensure that ```ii``` happened successfully and you are on the default main branch. You should see this message:
 
 ![](../images/image3.jpg)
 
@@ -328,11 +359,13 @@ Before submitting a merge request, your branch is required to be up to date with
 (Optional) 5. If you're in a different branch and not the main branch, then type in the terminal ```git checkout main``` and then ```git status``` to confirm you are on the main branch.
 
 ## What is: the .gitignore file
+
 .gitignore is a text file that contains file extensions and directories' paths that we wish Git to ignore. For example, we have created a repository on GitHub that should never contain any sensitive data. To ensure this, in the repository's .gitignore file we will include ```.csv```, `.xlsx` or any other file format that can contain data.
 
 GitHub has a .gitignore [template](https://github.com/github/gitignore/blob/main/R.gitignore) available to analysts and developers to use in their projects. Notice how in the template, line 22 contain RStudio project settings, which are configuration files created by RStudio when you first open your repository as an RStudio project. Sometimes these configuration files can contain information you don't want to publish on GitHub/GitLab, thus by including them in the .gitignore file you are ensuring that these files will never leave your local machine.
- 
+
 ## What is: the README.md file
+
 This will show up on GitHub when we push the code, written in Markdown (hence the .md extension).
 
 > Markdown is a "markup language", which is basically just a way to write plain text that end up getting formatted nicely. It is used on GitHub and GitLab, and can also be used in an [interactive python notebook](#interactive-python-notebooks) cell.
@@ -342,4 +375,5 @@ On the first line of your README.md file, you should write the title. You must p
 On the second line, put a short, one-line description of the project.
 
 # External links
+
 * [GitHub Docs - Pull requests](https://docs.github.com/en/pull-requests)
