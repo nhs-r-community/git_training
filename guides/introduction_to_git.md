@@ -87,55 +87,6 @@ As a prerequisite for using version control with RStudio desktop or RStudio Clou
 
 Visit this [link](https://github.com/join) to create a GitHub account, it's free!
 
-### 2. Create your access token on GitHub
-
-There is an excellent step by step guide on [How to Create your Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) on GitHub by GitHub Docs. The process is exactly the same as GitLab (see [credentials for GitLab](https://github.com/NHSDigital/rap-community-of-practice/blob/main/docs/training_resources/git/intro-to-git.md#creating-your-access-token)), simply input your GitHub username and access token to verify your credentials.
-
-When selecting the access token's scope, the default options that should be ticked are: repo, admin:repo_hook and delete_repo.
-
-**Do not** forget to paste/save your access token somewhere safe as you won't be able to access it again.
-
-#### Video: How to create an access token on GitHub
-
-Here's a video on how to create the access token on GitHub: [Access token video](https://vimeo.com/678170438)
-
-#### HTTPS vs SSH key
-
-You might come across SSH protocol keys, as it is essentially another option to create a password and verify your credentials. This section on [HTTPS vs SSH](https://happygitwithr.com/https-pat.html#https-vs-ssh) protocol options of setting up credentials on GitHub explains the differences between these two options. There are pros and cons for both, we would recommend the HTTPS option for Git beginners.
-
-#### Troubleshooting credentials
-
-You might see something like this at any point:
-
-```
-remote: HTTP Basic: Access denied
-remote: You must use a personal access with 'read_repository or 'write_repository' scope for Git over HTTP.
-remote: You can generate one at https:// etc etc...
-remote: Authentication failed for 'repository address you're attempting to git clone'
-```
-
-This can mean a number of things: either your access token has expired or you have entered the wrong access token for your password (or username even). If your access token has expired or about to expire, you can check by going to Gitlab Profile -> Preferences -> Access Tokens then scroll all the way down and see if there’s an Active Access Token and check the expiration date.
-
-* These steps will help you fix your access to the repository:
-
-1. To fix this we need to create a new access token (don’t assign a date this time, so it will never expire).
-
-2. In the command terminal type ```git pull -v``` (v stands for verification). This should prompt a new Git credentials window.
-
-* If you don't have an existing repository, and can't do step 2, then:
-
-1. In the terminal type ```git clone <git repo's copied clone url>``` but with the new credentials included in the URL, so:
-
-```
-C:\My_documents>git clone https://<username>:<password>@<domain>/example.git 
-```
-
-So, in my case it would be:
-
-```
-C:\My_documents>git clone https://<username>:<MY_NEW_ACCESS_TOKEN>@<domain>/example.git 
-```
-
 ## Exercises 1 - 6: Accessing a Git repository, creating a branch, adding a new file, uploading your changes to GitHub
 
 **Please select your software of choice to follow the training:**
