@@ -157,11 +157,7 @@ Naming branches in this way helps to make it very clear what change should be ha
 
 There are several ways to add a new file to the repository.
 
-For this exercise, we will create a file, with simply right-clicking on the repository's folder and then selecting the Create New File option:
-
-* To view and edit the repository's folders and files in Codespaces:
-
-
+* For this exercise, we will create a file, with simply right-clicking on the designated folder on the left side panel `Explorer` and then selecting the `New File` option. Feel free to name the file however you wish and add any content.
 
 #### 4. Commit your changes (follow standard Git command workflow)
 
