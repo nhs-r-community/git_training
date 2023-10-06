@@ -83,22 +83,21 @@ GitLab has a guide covering various cases on undoing any changes: <https://docs.
 
 As a prerequisite for using version control with RStudio desktop or RStudio Cloud:
 
-### 1. Create a GitHub account
+### * Create a GitHub account
 
 Visit this [link](https://github.com/join) to create a GitHub account, it's free!
 
-## Exercises 1 - 6: Accessing a Git repository, creating a branch, adding a new file, uploading your changes to GitHub (via GitHub Codespaces)
+## Steps 1 - 5: Accessing a Git repository via Codespaces, creating a branch, adding a new file, uploading your changes to GitHub (via GitHub Codespaces)
 
 **For RStudio/Posit users:**
 
-1. Using [RStudio Desktop](#using-rstudio-desktop)
-2. Using [RStudio Cloud](#using-rstudio-cloud)
+1. Using [RStudio Desktop](https://github.com/nhs-r-community/git_training/blob/2022-workshop-materials-rstudio/guides/introduction_to_git.md#using-rstudio-desktop)
+2. Using [RStudio Cloud](https://github.com/nhs-r-community/git_training/blob/2022-workshop-materials-rstudio/guides/introduction_to_git.md#using-rstudio-cloud)
 
 **Using Git locally**
-1. Follow this link for steps how to use Git locally.
+1. Follow this [link](https://github.com/nhs-r-community/git_training/blob/2022-workshop-materials-rstudio/guides/introduction_to_git.md#1-creating-your-local-git-repository-folder) for steps how to use Git locally.
 
-
-
+#### Step 1. Start a Codespaces session
 
 iv. Type ```git status``` in the terminal. You should see the this message:
 
