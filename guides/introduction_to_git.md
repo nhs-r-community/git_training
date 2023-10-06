@@ -94,49 +94,17 @@ Visit this [link](https://github.com/join) to create a GitHub account, it's free
 1. Using [RStudio Desktop](#using-rstudio-desktop)
 2. Using [RStudio Cloud](#using-rstudio-cloud)
 
-### Using RStudio Desktop
+**Using Git locally**
+1. Follow this link for steps how to use Git locally.
 
-**Getting started** - tasks 1 and 2 will be relevant only when accessing a repository for the **_first time_**.
 
-* Install Git via [Git installation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) is required.
-* Video: Solution to exercises 1 - 6 (Using RStudio Desktop). Here's the video solution to exercises 1-6: [Video exercises solution](https://vimeo.com/678172959)
 
-#### 1. Creating your local Git repository folder
-
-i. Open a Command terminal. This can be any terminal, we could use the built-in RStudio Desktop terminal or a separate terminal such as Windows Command Prompt, Anaconda Prompt or Git Bash etc. For example, to access Anaconda Prompt, click the Search option on the Windows toolbar and type "Anaconda Prompt" and open it. The file directory address that's displayed in the terminal will usually be the default top level C drive address or something similar.
-
-```
-(base) C:\Windows\system32>
-```
-
-ii. Create a folder in your local directory, this is where the GitHub (remote) repository will be copied/downloaded to. In the Anaconda Prompt terminal type ```cd <windows explorer repo folder address you just created>```, ```cd``` stands for `change directory`, and what this means is that the default terminal address will be directed to the new directory, the new folder address. Any Git commands applied in the terminal will apply to the current directory.
-
-```
-(base) C:\Windows\system32>cd C:\Users\<username>\Documents\my_project_folder\demo
-(base) C:\Users\<username>\Documents\my_project_folder\demo>
-```
-
-#### 2. Git clone (copy a GitHub repository)
-
-> If you're using GitLab instead of GitHub, these [steps](https://github.com/NHSDigital/rap-community-of-practice/blob/main/docs/training_resources/git/intro-to-git.md#2-git-clone-copydownload-a-gitlab-repository) will help you set up.
-
-i. The repository's clone URL will be on the GitHub repository's main page, click on the green Clone button (see image below).
-
-![](../images/git_clone.png)
-
-ii. Type ```git clone <repository's clone url>``` the git-demo repository using your local terminal. Enter your credentials when prompted (GitHub username and access token for the password.)
-
-```
-(base) C:\Users\<username>\Documents\my_project_folder\demo>git clone <paste the repo url address from the image above> 
-```
-
-iii. Type ```cd <windows explorer repo folder address>``` (open the newly downloaded git folder) in the terminal to assign the root level of the directory to the top level of the repository. This because the terminal is assigned to the folder containing the Git repository, not the folder that IS the Git repository.
 
 iv. Type ```git status``` in the terminal. You should see the this message:
 
 ![](../images/image3.jpg)
 
-#### 3. Create and switch to a new branch
+#### 2. Create and switch to a new branch
 
 Notice how in the image above, the first line says "On branch main". In Git, **"main"** is a naming convention for a branch. After cloning (downloading) a project from a remote server, the resulting local repository has a single local branch: the so-called "main" branch. This means that "main" can be seen as a repository's "default" branch. The main branch should always be locked, to protect the main build of your working code and/or documentation. To add new code/documentation/make any edits to the main branch, you need to submit a [pull request](introduction_to_git.md#how-to-submit-a-pull-request).
 
@@ -175,7 +143,7 @@ E.g.:
 
 Naming branches in this way helps to make it very clear what change should be happening in the branch. Sometimes code review will reveal that a branch that was intended to make one specific change in fact makes several changes. This should be avoided and the code review should reject the additional changes.
 
-#### 4. Add a new file (**for RStudio Cloud users, jump to step iv below)**
+#### 3. Add a new file (**for RStudio Cloud users, jump to step iv below)**
 
 There are several ways to add a new file to the repository.
 
@@ -201,7 +169,7 @@ For this exercise, we will create a file while in RStudio, with simply right-cli
 
 **Tip:** RStudio will have created a .Rproj/.Rhistory configuration file when you create an R project. To avoid having this uploaded to GitHub, a .gitignore file that contains those file formats will automatically block them from being pushed to the repository. See [.gitignore](introduction_to_git.md#what-is-the-gitignore-file) for more information.
 
-#### 5. Commit your changes (follow standard Git command workflow)
+#### 4. Commit your changes (follow standard Git command workflow)
 
 In Anaconda Prompt (or any terminal of your choice) or the RStudio Cloud built-in terminal type the following. I suggest you read through the git messages displayed after each command entered in the terminal, to familiarise yourself with the logic.
 
@@ -217,27 +185,9 @@ v. Type ```git status``` to view the status of your repo. There should be no mod
 
 vi. Type ```git push```. This command will upload all your commited changes to GitHub.
 
-#### 6. Check the repository on GitHub to view the changes updated
+#### 5. Check the repository on GitHub to view the changes updated
 
-Simply head over to GitHub, and the repository page on GitHub, select your branch and compare the changes between your branch and the master branch.
-
-### Using RStudio Cloud
-
-To use GitHub with RStudio Cloud and not RStudio desktop, first create an account with RStudio Cloud. RStudio Cloud has a detailed [guide](https://rstudio.cloud/learn/guide) on how to create projects, how to manage workspaces within the Cloud, how to handle permissions and teaching spaces.
-
-* To create a project from GitHub, select the "Your Workspace" option on the left hand side once in RStudio Cloud and select New Project on the far right of the top toolbar, in the Your Projects space.
-
-![](../images/new_project_git.png)
-
-* This will open a new dialogue that will ask for the Git Repository URL, this is the URL you copy, as described in [Step 2](introduction_to_git.md#2-git-clone-copy-a-github-repository) of this guide.
-* You will be prompted to enter your username (GitHub username) and your password, which is the access token created from the [Create Access token step](introduction_to_git.md#creating-your-access-token-on-github).
-* Once the Git repository is deployed, you will notice the repository file structure on the right hand side panel.
-
-![](../images/project_structure.png)
-
-* Steps [3](introduction_to_git.md#3-create-and-switch-to-a-new-branch), [4](introduction_to_git.md#4-add-a-new-file) and [5](introduction_to_git.md#5-commit-your-changes-follow-standard-git-command-workflow) will be the same, the only change being that instead of using your local terminal to input Git commands, you will be using the RStudio Cloud built-in terminal.
-
-![](../images/terminal.png)
+Simply head over the repository page on GitHub, select your branch and compare the changes between your branch and the master branch.
 
 ## How to: Submit a pull request
 
@@ -321,7 +271,7 @@ This will show up on GitHub when we push the code, written in Markdown (hence th
 
 > Markdown is a "markup language", which is basically just a way to write plain text that end up getting formatted nicely. It is used on GitHub and GitLab, and can also be used in an interactive python notebook cell.
 
-On the first line of your README.md file, you should write the title. You must put a # (hash) key followed by a space before the title of your project. The number of hashes sets the header level, with one hash being the title. Other headings in your README should be at least two hashes.
+On the first line of your README.md file,  write the title. Use a # (hash) key followed by a space before the title of your project. The number of hashes sets the header level, with one hash being the title. Other headings in your README should be at least two hashes.
 
 On the second line, put a short, one-line description of the project.
 
