@@ -87,9 +87,9 @@ As a prerequisite for using version control with RStudio desktop or RStudio Clou
 
 Visit this [link](https://github.com/join) to create a GitHub account, it's free!
 
-## Exercises 1 - 6: Accessing a Git repository, creating a branch, adding a new file, uploading your changes to GitHub
+## Exercises 1 - 6: Accessing a Git repository, creating a branch, adding a new file, uploading your changes to GitHub (via GitHub Codespaces)
 
-**Please select your software of choice to follow the training:**
+**For RStudio/Posit users:**
 
 1. Using [RStudio Desktop](#using-rstudio-desktop)
 2. Using [RStudio Cloud](#using-rstudio-cloud)
@@ -319,7 +319,7 @@ GitHub has a .gitignore [template](https://github.com/github/gitignore/blob/main
 
 This will show up on GitHub when we push the code, written in Markdown (hence the .md extension).
 
-> Markdown is a "markup language", which is basically just a way to write plain text that end up getting formatted nicely. It is used on GitHub and GitLab, and can also be used in an [interactive python notebook](#interactive-python-notebooks) cell.
+> Markdown is a "markup language", which is basically just a way to write plain text that end up getting formatted nicely. It is used on GitHub and GitLab, and can also be used in an interactive python notebook cell.
 
 On the first line of your README.md file, you should write the title. You must put a # (hash) key followed by a space before the title of your project. The number of hashes sets the header level, with one hash being the title. Other headings in your README should be at least two hashes.
 
