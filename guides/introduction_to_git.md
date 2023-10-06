@@ -2,7 +2,7 @@
 
 > Feel free to use the table of contents attached to the top left of this guide for quicker navigation!
 
-This page is intended as a starting point for R users who are new to using Git. It shows you the basic commands and the workflow to use Git on your own, in conjunction with using RStudio Desktop or RStudio Cloud.
+This page is intended as a starting point for R users who are new to using Git. It shows you the basic commands and the workflow to use Git on your own, in conjunction with using Codespaces.
 
 To use Git as a team you should complete this section and the following section on [using git collaboratively](./using_git_collaboratively.md).
 
@@ -162,11 +162,10 @@ For this exercise, we will create a file, with simply right-clicking on the repo
 * To view and edit the repository's folders and files in Codespaces:
 
 
-**Tip:** RStudio will have created a .Rproj/.Rhistory configuration file when you create an R project. To avoid having this uploaded to GitHub, a .gitignore file that contains those file formats will automatically block them from being pushed to the repository. See [.gitignore](introduction_to_git.md#what-is-the-gitignore-file) for more information.
 
 #### 4. Commit your changes (follow standard Git command workflow)
 
-In Anaconda Prompt (or any terminal of your choice) or the RStudio Cloud built-in terminal type the following. I suggest you read through the git messages displayed after each command entered in the terminal, to familiarise yourself with the logic.
+In terminal, type the following. I suggest to read through the git messages displayed after each command entered in the terminal, to familiarise yourself with the logic.
 
 i. Type ```git status``` to see the modifications that haven't been staged yet (in red colour).
 
