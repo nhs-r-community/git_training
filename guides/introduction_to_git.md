@@ -106,7 +106,7 @@ GitHub has excellent resources on had to initialise Codespaces sessions, see [Cr
 
 * Type ```git status``` in the terminal, usually the lower panel. You should see the this message:
 
-![](../images/image3.jpg)
+![](../images/codespaces_image_1.png)
 
 #### 2. Create and switch to a new branch
 
