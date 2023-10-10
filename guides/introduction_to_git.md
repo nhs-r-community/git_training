@@ -1,6 +1,6 @@
 # Overview
 
-> Feel free to use the table of contents attached to the top left of this guide for quicker navigation!
+> Feel free to use the table of contents attached to the top right of this guide for quicker navigation!
 
 This page is intended as a starting point for R users who are new to using Git. It shows you the basic commands and the workflow to use Git on your own, in conjunction with using Codespaces.
 
