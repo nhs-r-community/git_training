@@ -153,7 +153,7 @@ E.g.:
 
 Naming branches in this way helps to make it very clear what change should be happening in the branch. Sometimes code review will reveal that a branch that was intended to make one specific change in fact makes several changes. This should be avoided and the code review should reject the additional changes.
 
-#### 3. Add a new file, make a few changes**
+#### 3. Add a new file, make a few changes
 
 There are several ways to add a new file to the repository.
 
