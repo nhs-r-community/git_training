@@ -4,7 +4,7 @@ How to get started:
 ### Instructions for Codespaces
 1. Create your repository as a first step in practising using repositories, [How to create a new repository.](./guides/how_to_create_a_repo.md)
 2. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repository.
-3. Start [a new Codespaces session](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository#creating-a-codespace-for-a-repository) with your forked repository and follow the steps in our [guide to git for R users](./guides/introduction_to_git.md) (see [here](https://nhsdigital.github.io/rap-community-of-practice/training_resources/git/intro-to-git/) for an equivalent guide for Python users).
+3. Start [a new Codespaces session](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository#creating-a-codespace-for-a-repository) with your forked repository and follow the steps in our [guide to Git](./guides/introduction_to_git.md) (see [here](https://nhsdigital.github.io/rap-community-of-practice/training_resources/git/intro-to-git/) for an equivalent guide for Python users or see below for R!).
 
 ### Instructions if you're not using Codespaces
 1. Download [R](https://cran.r-project.org/bin/windows/base/) and [RStudio desktop](https://www.rstudio.com/products/rstudio/download/) or create an account on [RStudio cloud](https://login.rstudio.cloud/login?redirect=%2F).
