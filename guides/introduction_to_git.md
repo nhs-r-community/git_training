@@ -110,7 +110,7 @@ GitHub has excellent resources on had to initialise Codespaces sessions, see [Cr
 
 #### 2. Create and switch to a new branch
 
-**"Branch"** is another word for "version". Usually when developing a document or slides for a presentation, we could have numerous versions of the same slides, with small or major differences. By using different branches (or versions) of the same code, we can safely work and test without breaking the publication code, that resides in the default main branch of the repository.
+**"Branch"** is another word for "version". Usually when developing a document or slides for a presentation, we could have numerous versions of the same slides, with small or major differences. By using different branches (or versions) of the same code, we can safely work and test without breaking the publication code, that resides in the default `main` branch of the repository.
 
 Notice how in the image above, the first line says `On branch main`. In Git, `main` is a naming convention for a branch. This means that `main` can be seen as a repository's `default` branch. 
 
@@ -118,11 +118,11 @@ Notice how in the image above, the first line says `On branch main`. In Git, `ma
 
 To add new code/documentation/make any edits to the main branch, you need to submit a [pull request](introduction_to_git.md#how-to-submit-a-pull-request). We will visit this step later in the exercise.
 
-* To create a **new branch**, head over to GitHub, on the repository's main page, same webpage we used to find the Git clone repository's URL. To create a new branch on GitHub simply click on the "main" button underneath your repository's title.
+* To create a **new branch**, head over to GitHub, on the repository's main page, same webpage we used to find the Git clone repository's URL. To create a new branch on GitHub simply click on the `main` button underneath your repository's title.
 
 ![](../images/create_branch.png)
 
-* Once in the dropdown menu, type in the branch's new name and hit Enter. You should now have a new branch, copy of the main branch.
+* Once in the dropdown menu, type in the branch's new name and hit Enter. You should now have a new branch, copy of the `main` branch.
 
 ![](../images/create_branch_github.png)
 
