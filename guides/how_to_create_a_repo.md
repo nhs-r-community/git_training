@@ -12,4 +12,3 @@ This guide will show you how to create a repository on GitHub:
 * Decide on the visibility setting of your project: Public/Private or Enterprise/Internal (business visibility, available if the repository's Owner is your Organisation).
 * Choose having a README, a licence and/or a [.gitignore file](https://github.com/nhs-r-community/git_training/blob/hr_update/guides/intro_to_git.md#general-the-gitignore-file). Each option has a "Learn more" tag to understand each item's purpose.
 #### 5. Once happy with your choices, click "Create repository".
-#### 6. To access your new repository follow the [Introduction to Git/version control guide](https://github.com/nhs-r-community/git_training/blob/hr_update/guides/intro_to_git.md#exercises-1---6-accessing-a-git-repository-creating-a-branch-adding-a-new-file-uploading-your-changes-to-github).
