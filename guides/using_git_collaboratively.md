@@ -10,12 +10,11 @@ However, the important steps are quickly summarised below if you need a quick re
 
 ### Cloning a Repository
 
-* **In GitHub** navigate to the repository you wish to clone, and click on the green Clone button. Make a note of the relevant clone url for the repository.
-* **If using a desktop based editor (VSCode or RStudio Desktop)**:
+* **If using a desktop based editor (e.g. VSCode)**:
+  * **In GitHub** navigate to the repository you wish to clone, and click on the green `Code` button. Make a note of the relevant clone url for the repository on the local tab.
   * **In the command prompt**, type ```git clone <repository's clone url>```
-* **If using a Posit Online**, the "Your Workspace" option on the left hand side:
-  * Select New Project
-  * Enter the Git Repository URL
+* **If using a Codespace**, the "Your Workspace" option on the left hand side:
+  * *In GitHub** navigate to the repository you wish to clone, and click on the green Code button. On the Codespace tab, click the green `Create Codespace on Main` if visable or the small plus, `+`, button. This will automatically create a development space with the repository cloned to.
 * Complete any necessary authentication steps as required.
 
 ### Creating a new branch and commiting changes
@@ -76,9 +75,9 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 Different editors give us different tools for handling these merge conflicts, though the principles remain the same.
 
-### RStudio (Posit) Cloud or Desktop
+### Text Editor
 
-**In RStudio (Posit) Cloud or Desktop**, open that file with the conflict (in this case temperatures_function.py).
+**In your IDE or editor of choice**, open that file with the conflict (in this case temperatures_function.py).
 
 Scroll in the document to find the conflict. You will notice these strange lines where conflict has occurred:
 
