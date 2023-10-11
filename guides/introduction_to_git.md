@@ -1,8 +1,8 @@
 # Overview
 
-> Feel free to use the table of contents attached to the top left of this guide for quicker navigation!
+> Feel free to use the table of contents attached to the top right of this guide for quicker navigation!
 
-This page is intended as a starting point for R users who are new to using Git. It shows you the basic commands and the workflow to use Git on your own, in conjunction with using RStudio Desktop or RStudio Cloud.
+This page is intended as a starting point for R users who are new to using Git. It shows you the basic commands and the workflow to use Git on your own, in conjunction with using Codespaces.
 
 To use Git as a team you should complete this section and the following section on [using git collaboratively](./using_git_collaboratively.md).
 
@@ -81,178 +81,87 @@ GitLab has a guide covering various cases on undoing any changes: <https://docs.
 
 ## Git started: Setup for Git Basics exercise
 
-As a prerequisite for using version control with RStudio desktop or RStudio Cloud:
+We are using GitHub as our Git repository hosting platform:
 
-### 1. Create a GitHub account
+### Create a GitHub account
 
 Visit this [link](https://github.com/join) to create a GitHub account, it's free!
 
-### 2. Create your access token on GitHub
+## Steps 1 - 5: Accessing a Git repository via Codespaces, creating a branch, adding a new file, uploading your changes to GitHub (via GitHub Codespaces)
+This language agnostic exercise covers the basics of accessing a Git repository, creating a new branch, making changes to your branch and then finally commiting and pushing these changes back to the repository on GitHub. Depending on your starting point, the initial steps might differ (i.e. might have to download Git if using local machine) however steps 1-5 cover the core applicability of Git which is the same, despite your starting point (i.e. Posit Cloud/local machine Git/Codespaces users etc.)
 
-There is an excellent step by step guide on [How to Create your Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) on GitHub by GitHub Docs. The process is exactly the same as GitLab (see [credentials for GitLab](https://github.com/NHSDigital/rap-community-of-practice/blob/main/docs/training_resources/git/intro-to-git.md#creating-your-access-token)), simply input your GitHub username and access token to verify your credentials.
+* To use Git via RStudio please view the links below.
+* To use Git on your local machine please via the third link below, `Using Git locally`.
 
-When selecting the access token's scope, the default options that should be ticked are: repo, admin:repo_hook and delete_repo.
+> **For RStudio/Posit users**
+> 1. Using [RStudio Desktop](https://github.com/nhs-r-community/git_training/blob/2022-workshop-materials-rstudio/guides/introduction_to_git.md#using-rstudio-desktop)
+> 2. Using [RStudio Cloud](https://github.com/nhs-r-community/git_training/blob/2022-workshop-materials-rstudio/guides/introduction_to_git.md#using-rstudio-cloud)
 
-**Do not** forget to paste/save your access token somewhere safe as you won't be able to access it again.
+> **Using Git locally**
+> 1. Follow this [link](https://github.com/nhs-r-community/git_training/blob/2022-workshop-materials-rstudio/guides/introduction_to_git.md#1-creating-your-local-git-repository-folder) for steps how to use Git locally.
 
-#### Video: How to create an access token on GitHub
+#### Step 1. Start a Codespaces session
 
-Here's a video on how to create the access token on GitHub: [Access token video](https://vimeo.com/678170438)
+GitHub has excellent resources on had to initialise Codespaces sessions, see [Creating a codespace for a repository](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository#creating-a-codespace-for-a-repository).
 
-#### HTTPS vs SSH key
+* Type ```git status``` in the terminal, usually the lower panel. You should see the this message:
 
-You might come across SSH protocol keys, as it is essentially another option to create a password and verify your credentials. This section on [HTTPS vs SSH](https://happygitwithr.com/https-pat.html#https-vs-ssh) protocol options of setting up credentials on GitHub explains the differences between these two options. There are pros and cons for both, we would recommend the HTTPS option for Git beginners.
+![](../images/codespaces_image_1.png)
 
-#### Troubleshooting credentials
+#### 2. Create and switch to a new branch
 
-You might see something like this at any point:
+**"Branch"** is another word for "version". Usually when developing a document or slides for a presentation, we could have numerous versions of the same slides, with small or major differences. By using different branches (or versions) of the same code, we can safely work and test without breaking the publication code, that resides in the default `main` branch of the repository.
 
-```
-remote: HTTP Basic: Access denied
-remote: You must use a personal access with 'read_repository or 'write_repository' scope for Git over HTTP.
-remote: You can generate one at https:// etc etc...
-remote: Authentication failed for 'repository address you're attempting to git clone'
-```
+Notice how in the image above, the first line says `On branch main`. In Git, `main` is a naming convention for a branch. This means that `main` can be seen as a repository's `default` branch. 
 
-This can mean a number of things: either your access token has expired or you have entered the wrong access token for your password (or username even). If your access token has expired or about to expire, you can check by going to Gitlab Profile -> Preferences -> Access Tokens then scroll all the way down and see if there’s an Active Access Token and check the expiration date.
+> It is considered best practice to lock the default `main` branch, to protect the main build of your working code and/or documentation, see [here](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule) on how to lock the main branch.
 
-* These steps will help you fix your access to the repository:
+To add new code/documentation/make any edits to the main branch, you need to submit a [pull request](introduction_to_git.md#how-to-submit-a-pull-request). We will visit this step later in the exercise.
 
-1. To fix this we need to create a new access token (don’t assign a date this time, so it will never expire).
-
-2. In the command terminal type ```git pull -v``` (v stands for verification). This should prompt a new Git credentials window.
-
-* If you don't have an existing repository, and can't do step 2, then:
-
-1. In the terminal type ```git clone <git repo's copied clone url>``` but with the new credentials included in the URL, so:
-
-```
-C:\My_documents>git clone https://<username>:<password>@<domain>/example.git 
-```
-
-So, in my case it would be:
-
-```
-C:\My_documents>git clone https://<username>:<MY_NEW_ACCESS_TOKEN>@<domain>/example.git 
-```
-
-## Exercises 1 - 6: Accessing a Git repository, creating a branch, adding a new file, uploading your changes to GitHub
-
-**Please select your software of choice to follow the training:**
-
-1. Using [RStudio Desktop](#using-rstudio-desktop)
-2. Using [RStudio Cloud](#using-rstudio-cloud)
-
-### Using RStudio Desktop
-
-**Getting started** - tasks 1 and 2 will be relevant only when accessing a repository for the **_first time_**.
-
-* Install Git via [Git installation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) is required.
-* Video: Solution to exercises 1 - 6 (Using RStudio Desktop). Here's the video solution to exercises 1-6: [Video exercises solution](https://vimeo.com/678172959)
-
-#### 1. Creating your local Git repository folder
-
-i. Open a Command terminal. This can be any terminal, we could use the built-in RStudio Desktop terminal or a separate terminal such as Windows Command Prompt, Anaconda Prompt or Git Bash etc. For example, to access Anaconda Prompt, click the Search option on the Windows toolbar and type "Anaconda Prompt" and open it. The file directory address that's displayed in the terminal will usually be the default top level C drive address or something similar.
-
-```
-(base) C:\Windows\system32>
-```
-
-ii. Create a folder in your local directory, this is where the GitHub (remote) repository will be copied/downloaded to. In the Anaconda Prompt terminal type ```cd <windows explorer repo folder address you just created>```, ```cd``` stands for `change directory`, and what this means is that the default terminal address will be directed to the new directory, the new folder address. Any Git commands applied in the terminal will apply to the current directory.
-
-```
-(base) C:\Windows\system32>cd C:\Users\<username>\Documents\my_project_folder\demo
-(base) C:\Users\<username>\Documents\my_project_folder\demo>
-```
-
-#### 2. Git clone (copy a GitHub repository)
-
-> If you're using GitLab instead of GitHub, these [steps](https://github.com/NHSDigital/rap-community-of-practice/blob/main/docs/training_resources/git/intro-to-git.md#2-git-clone-copydownload-a-gitlab-repository) will help you set up.
-
-i. The repository's clone URL will be on the GitHub repository's main page, click on the green Clone button (see image below).
-
-![](../images/git_clone.png)
-
-ii. Type ```git clone <repository's clone url>``` the git-demo repository using your local terminal. Enter your credentials when prompted (GitHub username and access token for the password.)
-
-```
-(base) C:\Users\<username>\Documents\my_project_folder\demo>git clone <paste the repo url address from the image above> 
-```
-
-iii. Type ```cd <windows explorer repo folder address>``` (open the newly downloaded git folder) in the terminal to assign the root level of the directory to the top level of the repository. This because the terminal is assigned to the folder containing the Git repository, not the folder that IS the Git repository.
-
-iv. Type ```git status``` in the terminal. You should see the this message:
-
-![](../images/image3.jpg)
-
-#### 3. Create and switch to a new branch
-
-Notice how in the image above, the first line says "On branch main". In Git, **"main"** is a naming convention for a branch. After cloning (downloading) a project from a remote server, the resulting local repository has a single local branch: the so-called "main" branch. This means that "main" can be seen as a repository's "default" branch. The main branch should always be locked, to protect the main build of your working code and/or documentation. To add new code/documentation/make any edits to the main branch, you need to submit a [pull request](introduction_to_git.md#how-to-submit-a-pull-request).
-
-**"Branch"** is another word for "version". Usually when developing a document or slides for a presentation, we could have numerous versions of the same slides, with small or major differences. By using different branches (or versions) of the same code, we can safely work and test without breaking the publication code, that resides in the default master branch of the repository.
-
-i. To create a **new branch**, head over to GitHub, on the repository's main page, same webpage we used to find the Git clone repository's URL. To create a new branch on GitHub simply click on the "main" button underneath your repository's title.
+* To create a **new branch**, head over to GitHub, on the repository's main page, same webpage we used to find the Git clone repository's URL. To create a new branch on GitHub simply click on the `main` button underneath your repository's title.
 
 ![](../images/create_branch.png)
 
-ii. Once in the dropdown menu, type in the branch's new name and hit Enter. You should now have a new branch, copy of the main branch.
+* Once in the dropdown menu, type in the branch's new name and hit Enter. You should now have a new branch, copy of the `main` branch.
 
 ![](../images/create_branch_github.png)
 
-iii. In the above image notice how it points the original branch we are copying from, in grey letters: from "main". If you wish to create a new branch, which will be a copy from a different branch to "main", then set the repository to the branch you wish to copy from and then repeat steps i. and ii.
+* In the above image notice how it points the original branch we are copying from, in grey letters: from `main`. If you wish to create a new branch, which will be a copy from a different branch to `main`, then set the repository to the branch you wish to copy from and then repeat the previous steps.
 
-iv. Back to the terminal (e.g. Command Prompt/Anaconda Prompt/Git Bash etc.), type `git branch -a` to view a list of all available branches existing in the repository. The branches that contain the `remote/` path are the branches online, on GitHub. Have a look at the list. You will notice your new branch is not there yet. To update your local master branch with all the lastest updates on Gitlab, type ```git pull```. Type `git branch -a` and you should see your branch available in the list now.
+* Back to the terminal (e.g. Command Prompt/Anaconda Prompt/Git Bash etc.), type `git branch -a` to view a list of all available branches existing in the repository. The branches that contain the `remote/` path are the branches online, on GitHub.
 
-v. To start working on your branch and select, type in the terminal `git checkout <your branch name>`.
+* Have a look at the list. You will notice your new branch is not there yet. To update your local master branch with all the lastest updates on Gitlab, type ```git pull```. Then, type `git branch -a` and you should see your branch available in the list now.
 
-vi. Type ```git status``` and this way you can confirm that you are in a new branch. Git will display a message showing the current branch name and the current branch's information.
+* To start working on your branch and select, type in the terminal `git checkout <your branch name>`.
+
+* Type ```git status``` and this way you can confirm that you are in a new branch. Git will display a message showing the current branch name and the current branch's information.
 
 ![](../images/image564.PNG)
 
-_**Reminder:** any changes you make while in the main branch won't be uploaded to GitHub, as the main branch is protected and locked, so make sure you are in your own working branch! You can confirm this with step vi. above._
+_**Reminder:** any changes you make while in the main branch won't be uploaded to GitHub, as the main branch is protected and locked, so make sure you are in your own working branch! You can confirm this by typing `git status` in the terminal like above._
 
 ##### Branch naming strategy
 
 Following an agreed naming convention will make it much easier to keep the team's work organised. We follow this approach:
 
-  <initials>_<brief-description>
+`<initials>_<brief-description>`
 
 Here the project_id refers to our project ID in confluence (DS218). The initials are from my name. The ticket number refers to the jira ticket number.
 E.g.:
 
-   CQ_Add-field-definitions
+`CQ_Add-field-definitions`
 
 Naming branches in this way helps to make it very clear what change should be happening in the branch. Sometimes code review will reveal that a branch that was intended to make one specific change in fact makes several changes. This should be avoided and the code review should reject the additional changes.
 
-#### 4. Add a new file (**for RStudio Cloud users, jump to step iv below)**
+#### 3. Add a new file, make a few changes
 
 There are several ways to add a new file to the repository.
 
-For this exercise, we will create a file while in RStudio, with simply right-clicking on the repository's folder and then selecting the Create New File option:
+* For this exercise, we will create a file, with simply right-clicking on the designated folder on the left side panel `Explorer` and then selecting the `New File` option. Feel free to name the file however you wish and add any content.
 
-* To view and edit the repository's folders and files in RStudio:
-    1. Open RStudio desktop (if it's not already open).
-    2. On the top toolbar go File -> New Project, this will open a Create New Project dialogue.
+#### 4. Commit your changes (follow standard Git command workflow)
 
-    ![](../images/new_project.png)
-
-    3. In the Create New Project dialogue, select existing directory (since we have already cloned the GitHub repository to your local machine and have a folder) and in Location select the Open Folder icon to select the existing folder repository and click Create Project.
-
-    ![](../images/create_new_project.png)
-
-    4. You should be able to see the project structure on the lower right hand side windown as it is displayed on GitHub.
-
-    ![](../images/project_structure.png)
-
-    5. On the top toolbar select File -> New File -> Rscript and save the file somewhere in your repository (don't forget to name your Rscipt!).
-    6. Add something into that file, a simple print statement or a comment.
-    7. Save it on RStudio.
-
-**Tip:** RStudio will have created a .Rproj/.Rhistory configuration file when you create an R project. To avoid having this uploaded to GitHub, a .gitignore file that contains those file formats will automatically block them from being pushed to the repository. See [.gitignore](introduction_to_git.md#what-is-the-gitignore-file) for more information.
-
-#### 5. Commit your changes (follow standard Git command workflow)
-
-In Anaconda Prompt (or any terminal of your choice) or the RStudio Cloud built-in terminal type the following. I suggest you read through the git messages displayed after each command entered in the terminal, to familiarise yourself with the logic.
+In terminal, type the following. I suggest to read through the git messages displayed after each command entered in the terminal, to familiarise yourself with the logic.
 
 i. Type ```git status``` to see the modifications that haven't been staged yet (in red colour).
 
@@ -266,27 +175,9 @@ v. Type ```git status``` to view the status of your repo. There should be no mod
 
 vi. Type ```git push```. This command will upload all your commited changes to GitHub.
 
-#### 6. Check the repository on GitHub to view the changes updated
+#### 5. Check the repository on GitHub to view the changes updated
 
-Simply head over to GitHub, and the repository page on GitHub, select your branch and compare the changes between your branch and the master branch.
-
-### Using RStudio Cloud
-
-To use GitHub with RStudio Cloud and not RStudio desktop, first create an account with RStudio Cloud. RStudio Cloud has a detailed [guide](https://rstudio.cloud/learn/guide) on how to create projects, how to manage workspaces within the Cloud, how to handle permissions and teaching spaces.
-
-* To create a project from GitHub, select the "Your Workspace" option on the left hand side once in RStudio Cloud and select New Project on the far right of the top toolbar, in the Your Projects space.
-
-![](../images/new_project_git.png)
-
-* This will open a new dialogue that will ask for the Git Repository URL, this is the URL you copy, as described in [Step 2](introduction_to_git.md#2-git-clone-copy-a-github-repository) of this guide.
-* You will be prompted to enter your username (GitHub username) and your password, which is the access token created from the [Create Access token step](introduction_to_git.md#creating-your-access-token-on-github).
-* Once the Git repository is deployed, you will notice the repository file structure on the right hand side panel.
-
-![](../images/project_structure.png)
-
-* Steps [3](introduction_to_git.md#3-create-and-switch-to-a-new-branch), [4](introduction_to_git.md#4-add-a-new-file) and [5](introduction_to_git.md#5-commit-your-changes-follow-standard-git-command-workflow) will be the same, the only change being that instead of using your local terminal to input Git commands, you will be using the RStudio Cloud built-in terminal.
-
-![](../images/terminal.png)
+Simply head over the repository page on GitHub, select your branch and compare the changes between your branch and the master branch.
 
 ## How to: Submit a pull request
 
@@ -368,9 +259,9 @@ GitHub has a .gitignore [template](https://github.com/github/gitignore/blob/main
 
 This will show up on GitHub when we push the code, written in Markdown (hence the .md extension).
 
-> Markdown is a "markup language", which is basically just a way to write plain text that end up getting formatted nicely. It is used on GitHub and GitLab, and can also be used in an [interactive python notebook](#interactive-python-notebooks) cell.
+> Markdown is a "markup language", which is basically just a way to write plain text that end up getting formatted nicely. It is used on GitHub and GitLab, and can also be used in an interactive python notebook cell.
 
-On the first line of your README.md file, you should write the title. You must put a # (hash) key followed by a space before the title of your project. The number of hashes sets the header level, with one hash being the title. Other headings in your README should be at least two hashes.
+On the first line of your README.md file,  write the title. Use a # (hash) key followed by a space before the title of your project. The number of hashes sets the header level, with one hash being the title. Other headings in your README should be at least two hashes.
 
 On the second line, put a short, one-line description of the project.
 
