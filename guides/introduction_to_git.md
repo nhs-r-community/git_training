@@ -1,6 +1,6 @@
 # Overview
 
-> Feel free to use the table of contents attached to the top left of this guide for quicker navigation!
+> Feel free to use the table of contents attached to the top right of this guide for quicker navigation!
 
 This page is intended as a starting point for R users who are new to using Git. It shows you the basic commands and the workflow to use Git on your own, in conjunction with using Codespaces.
 
@@ -110,7 +110,7 @@ GitHub has excellent resources on had to initialise Codespaces sessions, see [Cr
 
 #### 2. Create and switch to a new branch
 
-**"Branch"** is another word for "version". Usually when developing a document or slides for a presentation, we could have numerous versions of the same slides, with small or major differences. By using different branches (or versions) of the same code, we can safely work and test without breaking the publication code, that resides in the default main branch of the repository.
+**"Branch"** is another word for "version". Usually when developing a document or slides for a presentation, we could have numerous versions of the same slides, with small or major differences. By using different branches (or versions) of the same code, we can safely work and test without breaking the publication code, that resides in the default `main` branch of the repository.
 
 Notice how in the image above, the first line says `On branch main`. In Git, `main` is a naming convention for a branch. This means that `main` can be seen as a repository's `default` branch. 
 
@@ -118,11 +118,11 @@ Notice how in the image above, the first line says `On branch main`. In Git, `ma
 
 To add new code/documentation/make any edits to the main branch, you need to submit a [pull request](introduction_to_git.md#how-to-submit-a-pull-request). We will visit this step later in the exercise.
 
-* To create a **new branch**, head over to GitHub, on the repository's main page, same webpage we used to find the Git clone repository's URL. To create a new branch on GitHub simply click on the "main" button underneath your repository's title.
+* To create a **new branch**, head over to GitHub, on the repository's main page, same webpage we used to find the Git clone repository's URL. To create a new branch on GitHub simply click on the `main` button underneath your repository's title.
 
 ![](../images/create_branch.png)
 
-* Once in the dropdown menu, type in the branch's new name and hit Enter. You should now have a new branch, copy of the main branch.
+* Once in the dropdown menu, type in the branch's new name and hit Enter. You should now have a new branch, copy of the `main` branch.
 
 ![](../images/create_branch_github.png)
 
@@ -130,7 +130,7 @@ To add new code/documentation/make any edits to the main branch, you need to sub
 
 * Back to the terminal (e.g. Command Prompt/Anaconda Prompt/Git Bash etc.), type `git branch -a` to view a list of all available branches existing in the repository. The branches that contain the `remote/` path are the branches online, on GitHub.
 
-Have a look at the list. You will notice your new branch is not there yet. To update your local master branch with all the lastest updates on Gitlab, type ```git pull```. Then, type `git branch -a` and you should see your branch available in the list now.
+* Have a look at the list. You will notice your new branch is not there yet. To update your local master branch with all the lastest updates on Gitlab, type ```git pull```. Then, type `git branch -a` and you should see your branch available in the list now.
 
 * To start working on your branch and select, type in the terminal `git checkout <your branch name>`.
 
@@ -153,7 +153,7 @@ E.g.:
 
 Naming branches in this way helps to make it very clear what change should be happening in the branch. Sometimes code review will reveal that a branch that was intended to make one specific change in fact makes several changes. This should be avoided and the code review should reject the additional changes.
 
-#### 3. Add a new file, make a few changes**
+#### 3. Add a new file, make a few changes
 
 There are several ways to add a new file to the repository.
 

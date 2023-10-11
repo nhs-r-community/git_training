@@ -2,20 +2,14 @@
 
 Welcome to the NHS-R community repository for Git Training. Code version control is fundamental skill for any analysts, as it provides tonnes of benefits for both you and your project.
 
-## How to get started
+### Instructions for Codespaces
+1. Create your repository as a first step in practising using repositories, [How to create a new repository.](./guides/how_to_create_a_repo.md)
+2. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repository.
+3. Start [a new Codespaces session](https://docs.github.com/en/codespaces/developing-in-codespaces/creating-a-codespace-for-a-repository#creating-a-codespace-for-a-repository) with your forked repository and follow the steps in our [guide to Git](./guides/introduction_to_git.md) (see [here](https://nhsdigital.github.io/rap-community-of-practice/training_resources/git/intro-to-git/) for an equivalent guide for Python users or see below for R!).
 
-You can follow along with the training in this repository in two ways, online with a [GitHub Codespace](https://github.com/features/codespaces) (60-hours per month free) or offline, on your own machine. 
-
-Either way you want to follow along, you will need a repository to work with. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repository, then git clone your forked repository or create a [new repository.](./guides/how_to_create_a_repo.md) It's recommended to practice first by forking and cloning this repository. 
-
-### Online
-
-Working in Codespaces requires very little set up; a lot of the process of configuring Access Tokens and cloning a repository is handled automatically for you. Given you have saved so much time, check out the [RAP Community of Practice training guides for Git](https://nhsdigital.github.io/rap-community-of-practice/training_resources/git/introduction-to-git/) or have a look at the next steps down below! 
-
-### Offline
-
-1. Download [R](https://cran.r-project.org/bin/windows/base/) and [RStudio desktop](https://www.rstudio.com/products/rstudio/download/) or [Visual Studio Code desktop](https://code.visualstudio.com/download).
-2. Install Git via this [link](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+### Instructions if you're not using Codespaces
+1. Download [R](https://cran.r-project.org/bin/windows/base/) and [RStudio desktop](https://www.rstudio.com/products/rstudio/download/) or create an account on [RStudio cloud](https://login.rstudio.cloud/login?redirect=%2F).
+2. Install Git via this [link](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), ONLY if you are using RStudio desktop.
 3. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) this repository, then git clone your forked repository or create a [new repository.](./guides/how_to_create_a_repo.md) It's recommended to practice first by forking and cloning this repository.
 4. Follow the steps in our [guide to git for R users](./guides/introduction_to_git.md) (see [here](https://nhsdigital.github.io/rap-community-of-practice/training_resources/git/introduction-to-git/) for an equivalent guide for Python users).
 
