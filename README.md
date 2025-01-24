@@ -1,4 +1,6 @@
-# git_training
+# Introduction to Version Control (Git/GitHub)
+
+[YouTube video](https://youtu.be/wOk7wDsHD8o)
 
 Welcome to the NHS-R community repository for Git Training. Code version control is fundamental skill for any analysts, as it provides tonnes of benefits for both you and your project.
 
